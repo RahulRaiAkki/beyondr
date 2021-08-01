@@ -1,0 +1,1462 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateUser {
+  onCreateUser {
+    id
+    name
+    userid
+    email
+    message {
+      nextToken
+    }
+    awsdate
+    appointment {
+      nextToken
+    }
+    userdatabase {
+      nextToken
+    }
+    doctor {
+      nextToken
+    }
+    post {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateUser {
+  onUpdateUser {
+    id
+    name
+    userid
+    email
+    message {
+      nextToken
+    }
+    awsdate
+    appointment {
+      nextToken
+    }
+    userdatabase {
+      nextToken
+    }
+    doctor {
+      nextToken
+    }
+    post {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteUser {
+  onDeleteUser {
+    id
+    name
+    userid
+    email
+    message {
+      nextToken
+    }
+    awsdate
+    appointment {
+      nextToken
+    }
+    userdatabase {
+      nextToken
+    }
+    doctor {
+      nextToken
+    }
+    post {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateBookMark {
+  onCreateBookMark {
+    id
+    userid
+    bookmarktype
+    discussiongroupid
+    livebroadcastingid
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateBookMark {
+  onUpdateBookMark {
+    id
+    userid
+    bookmarktype
+    discussiongroupid
+    livebroadcastingid
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteBookMark {
+  onDeleteBookMark {
+    id
+    userid
+    bookmarktype
+    discussiongroupid
+    livebroadcastingid
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreatePaymentRequest {
+  onCreatePaymentRequest {
+    id
+    PaymentRequestType
+    doctorID
+    date
+    appointmentid
+    request
+    paidtodoctordate
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdatePaymentRequest {
+  onUpdatePaymentRequest {
+    id
+    PaymentRequestType
+    doctorID
+    date
+    appointmentid
+    request
+    paidtodoctordate
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeletePaymentRequest {
+  onDeletePaymentRequest {
+    id
+    PaymentRequestType
+    doctorID
+    date
+    appointmentid
+    request
+    paidtodoctordate
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreatePackagesBuy {
+  onCreatePackagesBuy {
+    id
+    doctorID
+    userID
+    numberofappointmentsused
+    consultationfees
+    conultationfesscurrency
+    numofappointments
+    validity
+    date
+    doctortype
+    PaymentCompletionStatus
+    PaymentMode
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdatePackagesBuy {
+  onUpdatePackagesBuy {
+    id
+    doctorID
+    userID
+    numberofappointmentsused
+    consultationfees
+    conultationfesscurrency
+    numofappointments
+    validity
+    date
+    doctortype
+    PaymentCompletionStatus
+    PaymentMode
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeletePackagesBuy {
+  onDeletePackagesBuy {
+    id
+    doctorID
+    userID
+    numberofappointmentsused
+    consultationfees
+    conultationfesscurrency
+    numofappointments
+    validity
+    date
+    doctortype
+    PaymentCompletionStatus
+    PaymentMode
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreatePackages {
+  onCreatePackages {
+    id
+    doctorID
+    consultationfees
+    conultationfesscurrency
+    numofappointments
+    validity
+    doctortype
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdatePackages {
+  onUpdatePackages {
+    id
+    doctorID
+    consultationfees
+    conultationfesscurrency
+    numofappointments
+    validity
+    doctortype
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeletePackages {
+  onDeletePackages {
+    id
+    doctorID
+    consultationfees
+    conultationfesscurrency
+    numofappointments
+    validity
+    doctortype
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateBroadCast {
+  onCreateBroadCast {
+    id
+    doctorID
+    date
+    name
+    description
+    doctortype
+    BroadCastStatus
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateBroadCast {
+  onUpdateBroadCast {
+    id
+    doctorID
+    date
+    name
+    description
+    doctortype
+    BroadCastStatus
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteBroadCast {
+  onDeleteBroadCast {
+    id
+    doctorID
+    date
+    name
+    description
+    doctortype
+    BroadCastStatus
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateCommunities {
+  onCreateCommunities {
+    id
+    communityname
+    communityowner
+    description
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateCommunities {
+  onUpdateCommunities {
+    id
+    communityname
+    communityowner
+    description
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteCommunities {
+  onDeleteCommunities {
+    id
+    communityname
+    communityowner
+    description
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateContactUs {
+  onCreateContactUs {
+    id
+    userid
+    date
+    title
+    description
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateContactUs {
+  onUpdateContactUs {
+    id
+    userid
+    date
+    title
+    description
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteContactUs {
+  onDeleteContactUs {
+    id
+    userid
+    date
+    title
+    description
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateNotifications {
+  onCreateNotifications {
+    id
+    meetingid
+    request
+    userid
+    date
+    doctorid
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateNotifications {
+  onUpdateNotifications {
+    id
+    meetingid
+    request
+    userid
+    date
+    doctorid
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteNotifications {
+  onDeleteNotifications {
+    id
+    meetingid
+    request
+    userid
+    date
+    doctorid
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreatePaymentfromWallet {
+  onCreatePaymentfromWallet {
+    id
+    amount
+    currency
+    date
+    paymentfrom
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdatePaymentfromWallet {
+  onUpdatePaymentfromWallet {
+    id
+    amount
+    currency
+    date
+    paymentfrom
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeletePaymentfromWallet {
+  onDeletePaymentfromWallet {
+    id
+    amount
+    currency
+    date
+    paymentfrom
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreatePaymentforWallet {
+  onCreatePaymentforWallet {
+    id
+    amount
+    currency
+    date
+    paymentfrom
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdatePaymentforWallet {
+  onUpdatePaymentforWallet {
+    id
+    amount
+    currency
+    date
+    paymentfrom
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeletePaymentforWallet {
+  onDeletePaymentforWallet {
+    id
+    amount
+    currency
+    date
+    paymentfrom
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreatePaymentforAppointment {
+  onCreatePaymentforAppointment {
+    id
+    amount
+    paymentfrom
+    currency
+    date
+    paymentto
+    appointmentid
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdatePaymentforAppointment {
+  onUpdatePaymentforAppointment {
+    id
+    amount
+    paymentfrom
+    currency
+    date
+    paymentto
+    appointmentid
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeletePaymentforAppointment {
+  onDeletePaymentforAppointment {
+    id
+    amount
+    paymentfrom
+    currency
+    date
+    paymentto
+    appointmentid
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateWellnessPost {
+  onCreateWellnessPost {
+    id
+    title
+    image
+    date
+    description
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateWellnessPost {
+  onUpdateWellnessPost {
+    id
+    title
+    image
+    date
+    description
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteWellnessPost {
+  onDeleteWellnessPost {
+    id
+    title
+    image
+    date
+    description
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreatePost {
+  onCreatePost {
+    id
+    UserID
+    postidreference
+    PostType
+    title
+    image
+    date
+    description
+    numberoflikes
+    imagetype
+    DoctorType
+    likedbyusers {
+      nextToken
+    }
+    comments {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdatePost {
+  onUpdatePost {
+    id
+    UserID
+    postidreference
+    PostType
+    title
+    image
+    date
+    description
+    numberoflikes
+    imagetype
+    DoctorType
+    likedbyusers {
+      nextToken
+    }
+    comments {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeletePost {
+  onDeletePost {
+    id
+    UserID
+    postidreference
+    PostType
+    title
+    image
+    date
+    description
+    numberoflikes
+    imagetype
+    DoctorType
+    likedbyusers {
+      nextToken
+    }
+    comments {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateLikes {
+  onCreateLikes {
+    id
+    PostID
+    date
+    UserId
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateLikes {
+  onUpdateLikes {
+    id
+    PostID
+    date
+    UserId
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteLikes {
+  onDeleteLikes {
+    id
+    PostID
+    date
+    UserId
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateComments {
+  onCreateComments {
+    id
+    PostID
+    UserId
+    date
+    comment
+    commentfrom
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateComments {
+  onUpdateComments {
+    id
+    PostID
+    UserId
+    date
+    comment
+    commentfrom
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteComments {
+  onDeleteComments {
+    id
+    PostID
+    UserId
+    date
+    comment
+    commentfrom
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateReplyComments {
+  onCreateReplyComments {
+    id
+    PostID
+    UserId
+    comment
+    date
+    commentfrom
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateReplyComments {
+  onUpdateReplyComments {
+    id
+    PostID
+    UserId
+    comment
+    date
+    commentfrom
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteReplyComments {
+  onDeleteReplyComments {
+    id
+    PostID
+    UserId
+    comment
+    date
+    commentfrom
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateReport {
+  onCreateReport {
+    id
+    userID
+    doctorID
+    meetingid
+    reoporttype
+    date
+    summnaryname
+    summarydosage
+    summnaryinstr
+    summnaryreason
+    rxname
+    rxdosage
+    rxinstr
+    rxreason
+    labsname
+    labsdosage
+    labsinstr
+    labsreason
+    visitnotes
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateReport {
+  onUpdateReport {
+    id
+    userID
+    doctorID
+    meetingid
+    reoporttype
+    date
+    summnaryname
+    summarydosage
+    summnaryinstr
+    summnaryreason
+    rxname
+    rxdosage
+    rxinstr
+    rxreason
+    labsname
+    labsdosage
+    labsinstr
+    labsreason
+    visitnotes
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteReport {
+  onDeleteReport {
+    id
+    userID
+    doctorID
+    meetingid
+    reoporttype
+    date
+    summnaryname
+    summarydosage
+    summnaryinstr
+    summnaryreason
+    rxname
+    rxdosage
+    rxinstr
+    rxreason
+    labsname
+    labsdosage
+    labsinstr
+    labsreason
+    visitnotes
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateCoachPrescTask {
+  onCreateCoachPrescTask {
+    id
+    userID
+    doctorID
+    meetingid
+    weekday
+    task
+    date
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateCoachPrescTask {
+  onUpdateCoachPrescTask {
+    id
+    userID
+    doctorID
+    meetingid
+    weekday
+    task
+    date
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteCoachPrescTask {
+  onDeleteCoachPrescTask {
+    id
+    userID
+    doctorID
+    meetingid
+    weekday
+    task
+    date
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateReportsShared {
+  onCreateReportsShared {
+    id
+    userID
+    doctorID
+    meetingid
+    date
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateReportsShared {
+  onUpdateReportsShared {
+    id
+    userID
+    doctorID
+    meetingid
+    date
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteReportsShared {
+  onDeleteReportsShared {
+    id
+    userID
+    doctorID
+    meetingid
+    date
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateAppointment {
+  onCreateAppointment {
+    id
+    userID
+    doctorID
+    paymentMode
+    packagebuyid
+    consultationfees
+    PaymentCompletionStatus
+    conultationfesscurrency
+    starttime
+    slottime
+    date
+    meetingid
+    status
+    request
+    message
+    personalConsult
+    videoconsult
+    cancelledbyuser
+    cancellationdate
+    cancelledbydoctor
+    doctortype
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateAppointment {
+  onUpdateAppointment {
+    id
+    userID
+    doctorID
+    paymentMode
+    packagebuyid
+    consultationfees
+    PaymentCompletionStatus
+    conultationfesscurrency
+    starttime
+    slottime
+    date
+    meetingid
+    status
+    request
+    message
+    personalConsult
+    videoconsult
+    cancelledbyuser
+    cancellationdate
+    cancelledbydoctor
+    doctortype
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteAppointment {
+  onDeleteAppointment {
+    id
+    userID
+    doctorID
+    paymentMode
+    packagebuyid
+    consultationfees
+    PaymentCompletionStatus
+    conultationfesscurrency
+    starttime
+    slottime
+    date
+    meetingid
+    status
+    request
+    message
+    personalConsult
+    videoconsult
+    cancelledbyuser
+    cancellationdate
+    cancelledbydoctor
+    doctortype
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateCommunityMessage {
+  onCreateCommunityMessage {
+    id
+    communityid
+    messagefrom
+    date
+    content
+    messagetype
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateCommunityMessage {
+  onUpdateCommunityMessage {
+    id
+    communityid
+    messagefrom
+    date
+    content
+    messagetype
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteCommunityMessage {
+  onDeleteCommunityMessage {
+    id
+    communityid
+    messagefrom
+    date
+    content
+    messagetype
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateMessage {
+  onCreateMessage {
+    id
+    DoctorsID
+    UserID
+    messagetype
+    content
+    currentmessage
+    readbydoctor
+    imageboolean
+    readbyuser
+    date
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateMessage {
+  onUpdateMessage {
+    id
+    DoctorsID
+    UserID
+    messagetype
+    content
+    currentmessage
+    readbydoctor
+    imageboolean
+    readbyuser
+    date
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteMessage {
+  onDeleteMessage {
+    id
+    DoctorsID
+    UserID
+    messagetype
+    content
+    currentmessage
+    readbydoctor
+    imageboolean
+    readbyuser
+    date
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateUserDatabase {
+  onCreateUserDatabase {
+    id
+    UserID
+    name
+    lastname
+    sex
+    birthday
+    hieght
+    weight
+    emailaddress
+    phonenumber
+    emergencycontact
+    streetaddress
+    city
+    zipcode
+    smoke
+    alchol
+    date
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateUserDatabase {
+  onUpdateUserDatabase {
+    id
+    UserID
+    name
+    lastname
+    sex
+    birthday
+    hieght
+    weight
+    emailaddress
+    phonenumber
+    emergencycontact
+    streetaddress
+    city
+    zipcode
+    smoke
+    alchol
+    date
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteUserDatabase {
+  onDeleteUserDatabase {
+    id
+    UserID
+    name
+    lastname
+    sex
+    birthday
+    hieght
+    weight
+    emailaddress
+    phonenumber
+    emergencycontact
+    streetaddress
+    city
+    zipcode
+    smoke
+    alchol
+    date
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateAllergies {
+  onCreateAllergies {
+    id
+    userid
+    allergyname
+    description
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateAllergies {
+  onUpdateAllergies {
+    id
+    userid
+    allergyname
+    description
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteAllergies {
+  onDeleteAllergies {
+    id
+    userid
+    allergyname
+    description
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateExperience {
+  onCreateExperience {
+    id
+    doctorID
+    Title
+    CompanyName
+    location
+    doctortype
+    Description
+    startdate
+    enddate
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateExperience {
+  onUpdateExperience {
+    id
+    doctorID
+    Title
+    CompanyName
+    location
+    doctortype
+    Description
+    startdate
+    enddate
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteExperience {
+  onDeleteExperience {
+    id
+    doctorID
+    Title
+    CompanyName
+    location
+    doctortype
+    Description
+    startdate
+    enddate
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateDoctor {
+  onCreateDoctor {
+    id
+    UserID
+    doctortype
+    name
+    about
+    npi
+    languagesspoken
+    country
+    localaddress
+    paycut
+    state
+    zipcode
+    specialization
+    yearsofexxperience
+    gender
+    status
+    insurance
+    offlineconsultation
+    appointmentscompleted
+    viewsonprofile
+    education {
+      nextToken
+    }
+    experience {
+      nextToken
+    }
+    certificates {
+      nextToken
+    }
+    appointment {
+      nextToken
+    }
+    message {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateDoctor {
+  onUpdateDoctor {
+    id
+    UserID
+    doctortype
+    name
+    about
+    npi
+    languagesspoken
+    country
+    localaddress
+    paycut
+    state
+    zipcode
+    specialization
+    yearsofexxperience
+    gender
+    status
+    insurance
+    offlineconsultation
+    appointmentscompleted
+    viewsonprofile
+    education {
+      nextToken
+    }
+    experience {
+      nextToken
+    }
+    certificates {
+      nextToken
+    }
+    appointment {
+      nextToken
+    }
+    message {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteDoctor {
+  onDeleteDoctor {
+    id
+    UserID
+    doctortype
+    name
+    about
+    npi
+    languagesspoken
+    country
+    localaddress
+    paycut
+    state
+    zipcode
+    specialization
+    yearsofexxperience
+    gender
+    status
+    insurance
+    offlineconsultation
+    appointmentscompleted
+    viewsonprofile
+    education {
+      nextToken
+    }
+    experience {
+      nextToken
+    }
+    certificates {
+      nextToken
+    }
+    appointment {
+      nextToken
+    }
+    message {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateCertificates {
+  onCreateCertificates {
+    id
+    doctorID
+    imageurl
+    description
+    doctortype
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateCertificates {
+  onUpdateCertificates {
+    id
+    doctorID
+    imageurl
+    description
+    doctortype
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteCertificates {
+  onDeleteCertificates {
+    id
+    doctorID
+    imageurl
+    description
+    doctortype
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateSlots {
+  onCreateSlots {
+    id
+    doctorID
+    consulttime
+    starttime
+    endtime
+    consultationfees
+    conultationfesscurrency
+    videoconsultations
+    inpersonconsultation
+    videoandinpersonconsultation
+    consultationtimeedit
+    monday
+    tuesday
+    wednesday
+    thursday
+    friday
+    saturday
+    sunday
+    activeinactive
+    doctortype
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateSlots {
+  onUpdateSlots {
+    id
+    doctorID
+    consulttime
+    starttime
+    endtime
+    consultationfees
+    conultationfesscurrency
+    videoconsultations
+    inpersonconsultation
+    videoandinpersonconsultation
+    consultationtimeedit
+    monday
+    tuesday
+    wednesday
+    thursday
+    friday
+    saturday
+    sunday
+    activeinactive
+    doctortype
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteSlots {
+  onDeleteSlots {
+    id
+    doctorID
+    consulttime
+    starttime
+    endtime
+    consultationfees
+    conultationfesscurrency
+    videoconsultations
+    inpersonconsultation
+    videoandinpersonconsultation
+    consultationtimeedit
+    monday
+    tuesday
+    wednesday
+    thursday
+    friday
+    saturday
+    sunday
+    activeinactive
+    doctortype
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateInvite {
+  onCreateInvite {
+    id
+    doctorID
+    UserID
+    message
+    invite
+    date
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateInvite {
+  onUpdateInvite {
+    id
+    doctorID
+    UserID
+    message
+    invite
+    date
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteInvite {
+  onDeleteInvite {
+    id
+    doctorID
+    UserID
+    message
+    invite
+    date
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateEducation {
+  onCreateEducation {
+    id
+    doctorID
+    nameofuniversity
+    fieldofstudy
+    doctortype
+    degree
+    startdate
+    enddate
+    gradepoint
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateEducation {
+  onUpdateEducation {
+    id
+    doctorID
+    nameofuniversity
+    fieldofstudy
+    doctortype
+    degree
+    startdate
+    enddate
+    gradepoint
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteEducation {
+  onDeleteEducation {
+    id
+    doctorID
+    nameofuniversity
+    fieldofstudy
+    doctortype
+    degree
+    startdate
+    enddate
+    gradepoint
+    createdAt
+    updatedAt
+  }
+}

@@ -1,0 +1,1164 @@
+# this is an auto generated file. This will be overwritten
+query GetUser($id: ID!) {
+  getUser(id: $id) {
+    id
+    name
+    userid
+    email
+    message {
+      nextToken
+    }
+    awsdate
+    appointment {
+      nextToken
+    }
+    userdatabase {
+      nextToken
+    }
+    doctor {
+      nextToken
+    }
+    post {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+query ListUsers(
+  $filter: ModelUserFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listUsers(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      userid
+      email
+      awsdate
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetBookMark($id: ID!) {
+  getBookMark(id: $id) {
+    id
+    userid
+    bookmarktype
+    discussiongroupid
+    livebroadcastingid
+    createdAt
+    updatedAt
+  }
+}
+query ListBookMarks(
+  $filter: ModelBookMarkFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listBookMarks(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      userid
+      bookmarktype
+      discussiongroupid
+      livebroadcastingid
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetPaymentRequest($id: ID!) {
+  getPaymentRequest(id: $id) {
+    id
+    PaymentRequestType
+    doctorID
+    date
+    appointmentid
+    request
+    paidtodoctordate
+    createdAt
+    updatedAt
+  }
+}
+query ListPaymentRequests(
+  $filter: ModelPaymentRequestFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listPaymentRequests(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      PaymentRequestType
+      doctorID
+      date
+      appointmentid
+      request
+      paidtodoctordate
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetPackagesBuy($id: ID!) {
+  getPackagesBuy(id: $id) {
+    id
+    doctorID
+    userID
+    numberofappointmentsused
+    consultationfees
+    conultationfesscurrency
+    numofappointments
+    validity
+    date
+    doctortype
+    PaymentCompletionStatus
+    PaymentMode
+    createdAt
+    updatedAt
+  }
+}
+query ListPackagesBuys(
+  $filter: ModelPackagesBuyFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listPackagesBuys(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      doctorID
+      userID
+      numberofappointmentsused
+      consultationfees
+      conultationfesscurrency
+      numofappointments
+      validity
+      date
+      doctortype
+      PaymentCompletionStatus
+      PaymentMode
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetPackages($id: ID!) {
+  getPackages(id: $id) {
+    id
+    doctorID
+    consultationfees
+    conultationfesscurrency
+    numofappointments
+    validity
+    doctortype
+    createdAt
+    updatedAt
+  }
+}
+query ListPackagess(
+  $filter: ModelPackagesFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listPackagess(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      doctorID
+      consultationfees
+      conultationfesscurrency
+      numofappointments
+      validity
+      doctortype
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetBroadCast($id: ID!) {
+  getBroadCast(id: $id) {
+    id
+    doctorID
+    date
+    name
+    description
+    doctortype
+    BroadCastStatus
+    createdAt
+    updatedAt
+  }
+}
+query ListBroadCasts(
+  $filter: ModelBroadCastFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listBroadCasts(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      doctorID
+      date
+      name
+      description
+      doctortype
+      BroadCastStatus
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetCommunities($id: ID!) {
+  getCommunities(id: $id) {
+    id
+    communityname
+    communityowner
+    description
+    createdAt
+    updatedAt
+  }
+}
+query ListCommunitiess(
+  $filter: ModelCommunitiesFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listCommunitiess(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      communityname
+      communityowner
+      description
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetContactUs($id: ID!) {
+  getContactUs(id: $id) {
+    id
+    userid
+    date
+    title
+    description
+    createdAt
+    updatedAt
+  }
+}
+query ListContactUss(
+  $filter: ModelContactUsFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listContactUss(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      userid
+      date
+      title
+      description
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetNotifications($id: ID!) {
+  getNotifications(id: $id) {
+    id
+    meetingid
+    request
+    userid
+    date
+    doctorid
+    createdAt
+    updatedAt
+  }
+}
+query ListNotificationss(
+  $filter: ModelNotificationsFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listNotificationss(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      meetingid
+      request
+      userid
+      date
+      doctorid
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetPaymentfromWallet($id: ID!) {
+  getPaymentfromWallet(id: $id) {
+    id
+    amount
+    currency
+    date
+    paymentfrom
+    createdAt
+    updatedAt
+  }
+}
+query ListPaymentfromWallets(
+  $filter: ModelPaymentfromWalletFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listPaymentfromWallets(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      amount
+      currency
+      date
+      paymentfrom
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetPaymentforWallet($id: ID!) {
+  getPaymentforWallet(id: $id) {
+    id
+    amount
+    currency
+    date
+    paymentfrom
+    createdAt
+    updatedAt
+  }
+}
+query ListPaymentforWallets(
+  $filter: ModelPaymentforWalletFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listPaymentforWallets(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      amount
+      currency
+      date
+      paymentfrom
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetPaymentforAppointment($id: ID!) {
+  getPaymentforAppointment(id: $id) {
+    id
+    amount
+    paymentfrom
+    currency
+    date
+    paymentto
+    appointmentid
+    createdAt
+    updatedAt
+  }
+}
+query ListPaymentforAppointments(
+  $filter: ModelPaymentforAppointmentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listPaymentforAppointments(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      amount
+      paymentfrom
+      currency
+      date
+      paymentto
+      appointmentid
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetWellnessPost($id: ID!) {
+  getWellnessPost(id: $id) {
+    id
+    title
+    image
+    date
+    description
+    createdAt
+    updatedAt
+  }
+}
+query ListWellnessPosts(
+  $filter: ModelWellnessPostFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listWellnessPosts(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      title
+      image
+      date
+      description
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetPost($id: ID!) {
+  getPost(id: $id) {
+    id
+    UserID
+    postidreference
+    PostType
+    title
+    image
+    date
+    description
+    numberoflikes
+    imagetype
+    DoctorType
+    likedbyusers {
+      nextToken
+    }
+    comments {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+query ListPosts(
+  $filter: ModelPostFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listPosts(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      UserID
+      postidreference
+      PostType
+      title
+      image
+      date
+      description
+      numberoflikes
+      imagetype
+      DoctorType
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetLikes($id: ID!) {
+  getLikes(id: $id) {
+    id
+    PostID
+    date
+    UserId
+    createdAt
+    updatedAt
+  }
+}
+query ListLikess(
+  $filter: ModelLikesFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listLikess(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      PostID
+      date
+      UserId
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetComments($id: ID!) {
+  getComments(id: $id) {
+    id
+    PostID
+    UserId
+    date
+    comment
+    commentfrom
+    createdAt
+    updatedAt
+  }
+}
+query ListCommentss(
+  $filter: ModelCommentsFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listCommentss(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      PostID
+      UserId
+      date
+      comment
+      commentfrom
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetReplyComments($id: ID!) {
+  getReplyComments(id: $id) {
+    id
+    PostID
+    UserId
+    comment
+    date
+    commentfrom
+    createdAt
+    updatedAt
+  }
+}
+query ListReplyCommentss(
+  $filter: ModelReplyCommentsFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listReplyCommentss(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      PostID
+      UserId
+      comment
+      date
+      commentfrom
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetReport($id: ID!) {
+  getReport(id: $id) {
+    id
+    userID
+    doctorID
+    meetingid
+    reoporttype
+    date
+    summnaryname
+    summarydosage
+    summnaryinstr
+    summnaryreason
+    rxname
+    rxdosage
+    rxinstr
+    rxreason
+    labsname
+    labsdosage
+    labsinstr
+    labsreason
+    visitnotes
+    createdAt
+    updatedAt
+  }
+}
+query ListReports(
+  $filter: ModelReportFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listReports(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      userID
+      doctorID
+      meetingid
+      reoporttype
+      date
+      summnaryname
+      summarydosage
+      summnaryinstr
+      summnaryreason
+      rxname
+      rxdosage
+      rxinstr
+      rxreason
+      labsname
+      labsdosage
+      labsinstr
+      labsreason
+      visitnotes
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetCoachPrescTask($id: ID!) {
+  getCoachPrescTask(id: $id) {
+    id
+    userID
+    doctorID
+    meetingid
+    weekday
+    task
+    date
+    createdAt
+    updatedAt
+  }
+}
+query ListCoachPrescTasks(
+  $filter: ModelCoachPrescTaskFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listCoachPrescTasks(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      userID
+      doctorID
+      meetingid
+      weekday
+      task
+      date
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetReportsShared($id: ID!) {
+  getReportsShared(id: $id) {
+    id
+    userID
+    doctorID
+    meetingid
+    date
+    createdAt
+    updatedAt
+  }
+}
+query ListReportsShareds(
+  $filter: ModelReportsSharedFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listReportsShareds(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      userID
+      doctorID
+      meetingid
+      date
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetAppointment($id: ID!) {
+  getAppointment(id: $id) {
+    id
+    userID
+    doctorID
+    paymentMode
+    packagebuyid
+    consultationfees
+    PaymentCompletionStatus
+    conultationfesscurrency
+    starttime
+    slottime
+    date
+    meetingid
+    status
+    request
+    message
+    personalConsult
+    videoconsult
+    cancelledbyuser
+    cancellationdate
+    cancelledbydoctor
+    doctortype
+    createdAt
+    updatedAt
+  }
+}
+query ListAppointments(
+  $filter: ModelAppointmentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listAppointments(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      userID
+      doctorID
+      paymentMode
+      packagebuyid
+      consultationfees
+      PaymentCompletionStatus
+      conultationfesscurrency
+      starttime
+      slottime
+      date
+      meetingid
+      status
+      request
+      message
+      personalConsult
+      videoconsult
+      cancelledbyuser
+      cancellationdate
+      cancelledbydoctor
+      doctortype
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetCommunityMessage($id: ID!) {
+  getCommunityMessage(id: $id) {
+    id
+    communityid
+    messagefrom
+    date
+    content
+    messagetype
+    createdAt
+    updatedAt
+  }
+}
+query ListCommunityMessages(
+  $filter: ModelCommunityMessageFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listCommunityMessages(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      communityid
+      messagefrom
+      date
+      content
+      messagetype
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetMessage($id: ID!) {
+  getMessage(id: $id) {
+    id
+    DoctorsID
+    UserID
+    messagetype
+    content
+    currentmessage
+    readbydoctor
+    imageboolean
+    readbyuser
+    date
+    createdAt
+    updatedAt
+  }
+}
+query ListMessages(
+  $filter: ModelMessageFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listMessages(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      DoctorsID
+      UserID
+      messagetype
+      content
+      currentmessage
+      readbydoctor
+      imageboolean
+      readbyuser
+      date
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetUserDatabase($id: ID!) {
+  getUserDatabase(id: $id) {
+    id
+    UserID
+    name
+    lastname
+    sex
+    birthday
+    hieght
+    weight
+    emailaddress
+    phonenumber
+    emergencycontact
+    streetaddress
+    city
+    zipcode
+    smoke
+    alchol
+    date
+    createdAt
+    updatedAt
+  }
+}
+query ListUserDatabases(
+  $filter: ModelUserDatabaseFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listUserDatabases(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      UserID
+      name
+      lastname
+      sex
+      birthday
+      hieght
+      weight
+      emailaddress
+      phonenumber
+      emergencycontact
+      streetaddress
+      city
+      zipcode
+      smoke
+      alchol
+      date
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetAllergies($id: ID!) {
+  getAllergies(id: $id) {
+    id
+    userid
+    allergyname
+    description
+    createdAt
+    updatedAt
+  }
+}
+query ListAllergiess(
+  $filter: ModelAllergiesFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listAllergiess(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      userid
+      allergyname
+      description
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetExperience($id: ID!) {
+  getExperience(id: $id) {
+    id
+    doctorID
+    Title
+    CompanyName
+    location
+    doctortype
+    Description
+    startdate
+    enddate
+    createdAt
+    updatedAt
+  }
+}
+query ListExperiences(
+  $filter: ModelExperienceFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listExperiences(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      doctorID
+      Title
+      CompanyName
+      location
+      doctortype
+      Description
+      startdate
+      enddate
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetDoctor($id: ID!) {
+  getDoctor(id: $id) {
+    id
+    UserID
+    doctortype
+    name
+    about
+    npi
+    languagesspoken
+    country
+    localaddress
+    paycut
+    state
+    zipcode
+    specialization
+    yearsofexxperience
+    gender
+    status
+    insurance
+    offlineconsultation
+    appointmentscompleted
+    viewsonprofile
+    education {
+      nextToken
+    }
+    experience {
+      nextToken
+    }
+    certificates {
+      nextToken
+    }
+    appointment {
+      nextToken
+    }
+    message {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+query ListDoctors(
+  $filter: ModelDoctorFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listDoctors(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      UserID
+      doctortype
+      name
+      about
+      npi
+      languagesspoken
+      country
+      localaddress
+      paycut
+      state
+      zipcode
+      specialization
+      yearsofexxperience
+      gender
+      status
+      insurance
+      offlineconsultation
+      appointmentscompleted
+      viewsonprofile
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetCertificates($id: ID!) {
+  getCertificates(id: $id) {
+    id
+    doctorID
+    imageurl
+    description
+    doctortype
+    createdAt
+    updatedAt
+  }
+}
+query ListCertificatess(
+  $filter: ModelCertificatesFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listCertificatess(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      doctorID
+      imageurl
+      description
+      doctortype
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetSlots($id: ID!) {
+  getSlots(id: $id) {
+    id
+    doctorID
+    consulttime
+    starttime
+    endtime
+    consultationfees
+    conultationfesscurrency
+    videoconsultations
+    inpersonconsultation
+    videoandinpersonconsultation
+    consultationtimeedit
+    monday
+    tuesday
+    wednesday
+    thursday
+    friday
+    saturday
+    sunday
+    activeinactive
+    doctortype
+    createdAt
+    updatedAt
+  }
+}
+query ListSlotss(
+  $filter: ModelSlotsFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listSlotss(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      doctorID
+      consulttime
+      starttime
+      endtime
+      consultationfees
+      conultationfesscurrency
+      videoconsultations
+      inpersonconsultation
+      videoandinpersonconsultation
+      consultationtimeedit
+      monday
+      tuesday
+      wednesday
+      thursday
+      friday
+      saturday
+      sunday
+      activeinactive
+      doctortype
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetInvite($id: ID!) {
+  getInvite(id: $id) {
+    id
+    doctorID
+    UserID
+    message
+    invite
+    date
+    createdAt
+    updatedAt
+  }
+}
+query ListInvites(
+  $filter: ModelInviteFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listInvites(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      doctorID
+      UserID
+      message
+      invite
+      date
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetEducation($id: ID!) {
+  getEducation(id: $id) {
+    id
+    doctorID
+    nameofuniversity
+    fieldofstudy
+    doctortype
+    degree
+    startdate
+    enddate
+    gradepoint
+    createdAt
+    updatedAt
+  }
+}
+query ListEducations(
+  $filter: ModelEducationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEducations(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      doctorID
+      nameofuniversity
+      fieldofstudy
+      doctortype
+      degree
+      startdate
+      enddate
+      gradepoint
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}

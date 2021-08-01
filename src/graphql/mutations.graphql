@@ -1,0 +1,1741 @@
+# this is an auto generated file. This will be overwritten
+mutation CreateUser(
+  $input: CreateUserInput!
+  $condition: ModelUserConditionInput
+) {
+  createUser(input: $input, condition: $condition) {
+    id
+    name
+    userid
+    email
+    message {
+      nextToken
+    }
+    awsdate
+    appointment {
+      nextToken
+    }
+    userdatabase {
+      nextToken
+    }
+    doctor {
+      nextToken
+    }
+    post {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateUser(
+  $input: UpdateUserInput!
+  $condition: ModelUserConditionInput
+) {
+  updateUser(input: $input, condition: $condition) {
+    id
+    name
+    userid
+    email
+    message {
+      nextToken
+    }
+    awsdate
+    appointment {
+      nextToken
+    }
+    userdatabase {
+      nextToken
+    }
+    doctor {
+      nextToken
+    }
+    post {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteUser(
+  $input: DeleteUserInput!
+  $condition: ModelUserConditionInput
+) {
+  deleteUser(input: $input, condition: $condition) {
+    id
+    name
+    userid
+    email
+    message {
+      nextToken
+    }
+    awsdate
+    appointment {
+      nextToken
+    }
+    userdatabase {
+      nextToken
+    }
+    doctor {
+      nextToken
+    }
+    post {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateBookMark(
+  $input: CreateBookMarkInput!
+  $condition: ModelBookMarkConditionInput
+) {
+  createBookMark(input: $input, condition: $condition) {
+    id
+    userid
+    bookmarktype
+    discussiongroupid
+    livebroadcastingid
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateBookMark(
+  $input: UpdateBookMarkInput!
+  $condition: ModelBookMarkConditionInput
+) {
+  updateBookMark(input: $input, condition: $condition) {
+    id
+    userid
+    bookmarktype
+    discussiongroupid
+    livebroadcastingid
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteBookMark(
+  $input: DeleteBookMarkInput!
+  $condition: ModelBookMarkConditionInput
+) {
+  deleteBookMark(input: $input, condition: $condition) {
+    id
+    userid
+    bookmarktype
+    discussiongroupid
+    livebroadcastingid
+    createdAt
+    updatedAt
+  }
+}
+mutation CreatePaymentRequest(
+  $input: CreatePaymentRequestInput!
+  $condition: ModelPaymentRequestConditionInput
+) {
+  createPaymentRequest(input: $input, condition: $condition) {
+    id
+    PaymentRequestType
+    doctorID
+    date
+    appointmentid
+    request
+    paidtodoctordate
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdatePaymentRequest(
+  $input: UpdatePaymentRequestInput!
+  $condition: ModelPaymentRequestConditionInput
+) {
+  updatePaymentRequest(input: $input, condition: $condition) {
+    id
+    PaymentRequestType
+    doctorID
+    date
+    appointmentid
+    request
+    paidtodoctordate
+    createdAt
+    updatedAt
+  }
+}
+mutation DeletePaymentRequest(
+  $input: DeletePaymentRequestInput!
+  $condition: ModelPaymentRequestConditionInput
+) {
+  deletePaymentRequest(input: $input, condition: $condition) {
+    id
+    PaymentRequestType
+    doctorID
+    date
+    appointmentid
+    request
+    paidtodoctordate
+    createdAt
+    updatedAt
+  }
+}
+mutation CreatePackagesBuy(
+  $input: CreatePackagesBuyInput!
+  $condition: ModelPackagesBuyConditionInput
+) {
+  createPackagesBuy(input: $input, condition: $condition) {
+    id
+    doctorID
+    userID
+    numberofappointmentsused
+    consultationfees
+    conultationfesscurrency
+    numofappointments
+    validity
+    date
+    doctortype
+    PaymentCompletionStatus
+    PaymentMode
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdatePackagesBuy(
+  $input: UpdatePackagesBuyInput!
+  $condition: ModelPackagesBuyConditionInput
+) {
+  updatePackagesBuy(input: $input, condition: $condition) {
+    id
+    doctorID
+    userID
+    numberofappointmentsused
+    consultationfees
+    conultationfesscurrency
+    numofappointments
+    validity
+    date
+    doctortype
+    PaymentCompletionStatus
+    PaymentMode
+    createdAt
+    updatedAt
+  }
+}
+mutation DeletePackagesBuy(
+  $input: DeletePackagesBuyInput!
+  $condition: ModelPackagesBuyConditionInput
+) {
+  deletePackagesBuy(input: $input, condition: $condition) {
+    id
+    doctorID
+    userID
+    numberofappointmentsused
+    consultationfees
+    conultationfesscurrency
+    numofappointments
+    validity
+    date
+    doctortype
+    PaymentCompletionStatus
+    PaymentMode
+    createdAt
+    updatedAt
+  }
+}
+mutation CreatePackages(
+  $input: CreatePackagesInput!
+  $condition: ModelPackagesConditionInput
+) {
+  createPackages(input: $input, condition: $condition) {
+    id
+    doctorID
+    consultationfees
+    conultationfesscurrency
+    numofappointments
+    validity
+    doctortype
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdatePackages(
+  $input: UpdatePackagesInput!
+  $condition: ModelPackagesConditionInput
+) {
+  updatePackages(input: $input, condition: $condition) {
+    id
+    doctorID
+    consultationfees
+    conultationfesscurrency
+    numofappointments
+    validity
+    doctortype
+    createdAt
+    updatedAt
+  }
+}
+mutation DeletePackages(
+  $input: DeletePackagesInput!
+  $condition: ModelPackagesConditionInput
+) {
+  deletePackages(input: $input, condition: $condition) {
+    id
+    doctorID
+    consultationfees
+    conultationfesscurrency
+    numofappointments
+    validity
+    doctortype
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateBroadCast(
+  $input: CreateBroadCastInput!
+  $condition: ModelBroadCastConditionInput
+) {
+  createBroadCast(input: $input, condition: $condition) {
+    id
+    doctorID
+    date
+    name
+    description
+    doctortype
+    BroadCastStatus
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateBroadCast(
+  $input: UpdateBroadCastInput!
+  $condition: ModelBroadCastConditionInput
+) {
+  updateBroadCast(input: $input, condition: $condition) {
+    id
+    doctorID
+    date
+    name
+    description
+    doctortype
+    BroadCastStatus
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteBroadCast(
+  $input: DeleteBroadCastInput!
+  $condition: ModelBroadCastConditionInput
+) {
+  deleteBroadCast(input: $input, condition: $condition) {
+    id
+    doctorID
+    date
+    name
+    description
+    doctortype
+    BroadCastStatus
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateCommunities(
+  $input: CreateCommunitiesInput!
+  $condition: ModelCommunitiesConditionInput
+) {
+  createCommunities(input: $input, condition: $condition) {
+    id
+    communityname
+    communityowner
+    description
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateCommunities(
+  $input: UpdateCommunitiesInput!
+  $condition: ModelCommunitiesConditionInput
+) {
+  updateCommunities(input: $input, condition: $condition) {
+    id
+    communityname
+    communityowner
+    description
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteCommunities(
+  $input: DeleteCommunitiesInput!
+  $condition: ModelCommunitiesConditionInput
+) {
+  deleteCommunities(input: $input, condition: $condition) {
+    id
+    communityname
+    communityowner
+    description
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateContactUs(
+  $input: CreateContactUsInput!
+  $condition: ModelContactUsConditionInput
+) {
+  createContactUs(input: $input, condition: $condition) {
+    id
+    userid
+    date
+    title
+    description
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateContactUs(
+  $input: UpdateContactUsInput!
+  $condition: ModelContactUsConditionInput
+) {
+  updateContactUs(input: $input, condition: $condition) {
+    id
+    userid
+    date
+    title
+    description
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteContactUs(
+  $input: DeleteContactUsInput!
+  $condition: ModelContactUsConditionInput
+) {
+  deleteContactUs(input: $input, condition: $condition) {
+    id
+    userid
+    date
+    title
+    description
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateNotifications(
+  $input: CreateNotificationsInput!
+  $condition: ModelNotificationsConditionInput
+) {
+  createNotifications(input: $input, condition: $condition) {
+    id
+    meetingid
+    request
+    userid
+    date
+    doctorid
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateNotifications(
+  $input: UpdateNotificationsInput!
+  $condition: ModelNotificationsConditionInput
+) {
+  updateNotifications(input: $input, condition: $condition) {
+    id
+    meetingid
+    request
+    userid
+    date
+    doctorid
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteNotifications(
+  $input: DeleteNotificationsInput!
+  $condition: ModelNotificationsConditionInput
+) {
+  deleteNotifications(input: $input, condition: $condition) {
+    id
+    meetingid
+    request
+    userid
+    date
+    doctorid
+    createdAt
+    updatedAt
+  }
+}
+mutation CreatePaymentfromWallet(
+  $input: CreatePaymentfromWalletInput!
+  $condition: ModelPaymentfromWalletConditionInput
+) {
+  createPaymentfromWallet(input: $input, condition: $condition) {
+    id
+    amount
+    currency
+    date
+    paymentfrom
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdatePaymentfromWallet(
+  $input: UpdatePaymentfromWalletInput!
+  $condition: ModelPaymentfromWalletConditionInput
+) {
+  updatePaymentfromWallet(input: $input, condition: $condition) {
+    id
+    amount
+    currency
+    date
+    paymentfrom
+    createdAt
+    updatedAt
+  }
+}
+mutation DeletePaymentfromWallet(
+  $input: DeletePaymentfromWalletInput!
+  $condition: ModelPaymentfromWalletConditionInput
+) {
+  deletePaymentfromWallet(input: $input, condition: $condition) {
+    id
+    amount
+    currency
+    date
+    paymentfrom
+    createdAt
+    updatedAt
+  }
+}
+mutation CreatePaymentforWallet(
+  $input: CreatePaymentforWalletInput!
+  $condition: ModelPaymentforWalletConditionInput
+) {
+  createPaymentforWallet(input: $input, condition: $condition) {
+    id
+    amount
+    currency
+    date
+    paymentfrom
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdatePaymentforWallet(
+  $input: UpdatePaymentforWalletInput!
+  $condition: ModelPaymentforWalletConditionInput
+) {
+  updatePaymentforWallet(input: $input, condition: $condition) {
+    id
+    amount
+    currency
+    date
+    paymentfrom
+    createdAt
+    updatedAt
+  }
+}
+mutation DeletePaymentforWallet(
+  $input: DeletePaymentforWalletInput!
+  $condition: ModelPaymentforWalletConditionInput
+) {
+  deletePaymentforWallet(input: $input, condition: $condition) {
+    id
+    amount
+    currency
+    date
+    paymentfrom
+    createdAt
+    updatedAt
+  }
+}
+mutation CreatePaymentforAppointment(
+  $input: CreatePaymentforAppointmentInput!
+  $condition: ModelPaymentforAppointmentConditionInput
+) {
+  createPaymentforAppointment(input: $input, condition: $condition) {
+    id
+    amount
+    paymentfrom
+    currency
+    date
+    paymentto
+    appointmentid
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdatePaymentforAppointment(
+  $input: UpdatePaymentforAppointmentInput!
+  $condition: ModelPaymentforAppointmentConditionInput
+) {
+  updatePaymentforAppointment(input: $input, condition: $condition) {
+    id
+    amount
+    paymentfrom
+    currency
+    date
+    paymentto
+    appointmentid
+    createdAt
+    updatedAt
+  }
+}
+mutation DeletePaymentforAppointment(
+  $input: DeletePaymentforAppointmentInput!
+  $condition: ModelPaymentforAppointmentConditionInput
+) {
+  deletePaymentforAppointment(input: $input, condition: $condition) {
+    id
+    amount
+    paymentfrom
+    currency
+    date
+    paymentto
+    appointmentid
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateWellnessPost(
+  $input: CreateWellnessPostInput!
+  $condition: ModelWellnessPostConditionInput
+) {
+  createWellnessPost(input: $input, condition: $condition) {
+    id
+    title
+    image
+    date
+    description
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateWellnessPost(
+  $input: UpdateWellnessPostInput!
+  $condition: ModelWellnessPostConditionInput
+) {
+  updateWellnessPost(input: $input, condition: $condition) {
+    id
+    title
+    image
+    date
+    description
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteWellnessPost(
+  $input: DeleteWellnessPostInput!
+  $condition: ModelWellnessPostConditionInput
+) {
+  deleteWellnessPost(input: $input, condition: $condition) {
+    id
+    title
+    image
+    date
+    description
+    createdAt
+    updatedAt
+  }
+}
+mutation CreatePost(
+  $input: CreatePostInput!
+  $condition: ModelPostConditionInput
+) {
+  createPost(input: $input, condition: $condition) {
+    id
+    UserID
+    postidreference
+    PostType
+    title
+    image
+    date
+    description
+    numberoflikes
+    imagetype
+    DoctorType
+    likedbyusers {
+      nextToken
+    }
+    comments {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdatePost(
+  $input: UpdatePostInput!
+  $condition: ModelPostConditionInput
+) {
+  updatePost(input: $input, condition: $condition) {
+    id
+    UserID
+    postidreference
+    PostType
+    title
+    image
+    date
+    description
+    numberoflikes
+    imagetype
+    DoctorType
+    likedbyusers {
+      nextToken
+    }
+    comments {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation DeletePost(
+  $input: DeletePostInput!
+  $condition: ModelPostConditionInput
+) {
+  deletePost(input: $input, condition: $condition) {
+    id
+    UserID
+    postidreference
+    PostType
+    title
+    image
+    date
+    description
+    numberoflikes
+    imagetype
+    DoctorType
+    likedbyusers {
+      nextToken
+    }
+    comments {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateLikes(
+  $input: CreateLikesInput!
+  $condition: ModelLikesConditionInput
+) {
+  createLikes(input: $input, condition: $condition) {
+    id
+    PostID
+    date
+    UserId
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateLikes(
+  $input: UpdateLikesInput!
+  $condition: ModelLikesConditionInput
+) {
+  updateLikes(input: $input, condition: $condition) {
+    id
+    PostID
+    date
+    UserId
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteLikes(
+  $input: DeleteLikesInput!
+  $condition: ModelLikesConditionInput
+) {
+  deleteLikes(input: $input, condition: $condition) {
+    id
+    PostID
+    date
+    UserId
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateComments(
+  $input: CreateCommentsInput!
+  $condition: ModelCommentsConditionInput
+) {
+  createComments(input: $input, condition: $condition) {
+    id
+    PostID
+    UserId
+    date
+    comment
+    commentfrom
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateComments(
+  $input: UpdateCommentsInput!
+  $condition: ModelCommentsConditionInput
+) {
+  updateComments(input: $input, condition: $condition) {
+    id
+    PostID
+    UserId
+    date
+    comment
+    commentfrom
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteComments(
+  $input: DeleteCommentsInput!
+  $condition: ModelCommentsConditionInput
+) {
+  deleteComments(input: $input, condition: $condition) {
+    id
+    PostID
+    UserId
+    date
+    comment
+    commentfrom
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateReplyComments(
+  $input: CreateReplyCommentsInput!
+  $condition: ModelReplyCommentsConditionInput
+) {
+  createReplyComments(input: $input, condition: $condition) {
+    id
+    PostID
+    UserId
+    comment
+    date
+    commentfrom
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateReplyComments(
+  $input: UpdateReplyCommentsInput!
+  $condition: ModelReplyCommentsConditionInput
+) {
+  updateReplyComments(input: $input, condition: $condition) {
+    id
+    PostID
+    UserId
+    comment
+    date
+    commentfrom
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteReplyComments(
+  $input: DeleteReplyCommentsInput!
+  $condition: ModelReplyCommentsConditionInput
+) {
+  deleteReplyComments(input: $input, condition: $condition) {
+    id
+    PostID
+    UserId
+    comment
+    date
+    commentfrom
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateReport(
+  $input: CreateReportInput!
+  $condition: ModelReportConditionInput
+) {
+  createReport(input: $input, condition: $condition) {
+    id
+    userID
+    doctorID
+    meetingid
+    reoporttype
+    date
+    summnaryname
+    summarydosage
+    summnaryinstr
+    summnaryreason
+    rxname
+    rxdosage
+    rxinstr
+    rxreason
+    labsname
+    labsdosage
+    labsinstr
+    labsreason
+    visitnotes
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateReport(
+  $input: UpdateReportInput!
+  $condition: ModelReportConditionInput
+) {
+  updateReport(input: $input, condition: $condition) {
+    id
+    userID
+    doctorID
+    meetingid
+    reoporttype
+    date
+    summnaryname
+    summarydosage
+    summnaryinstr
+    summnaryreason
+    rxname
+    rxdosage
+    rxinstr
+    rxreason
+    labsname
+    labsdosage
+    labsinstr
+    labsreason
+    visitnotes
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteReport(
+  $input: DeleteReportInput!
+  $condition: ModelReportConditionInput
+) {
+  deleteReport(input: $input, condition: $condition) {
+    id
+    userID
+    doctorID
+    meetingid
+    reoporttype
+    date
+    summnaryname
+    summarydosage
+    summnaryinstr
+    summnaryreason
+    rxname
+    rxdosage
+    rxinstr
+    rxreason
+    labsname
+    labsdosage
+    labsinstr
+    labsreason
+    visitnotes
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateCoachPrescTask(
+  $input: CreateCoachPrescTaskInput!
+  $condition: ModelCoachPrescTaskConditionInput
+) {
+  createCoachPrescTask(input: $input, condition: $condition) {
+    id
+    userID
+    doctorID
+    meetingid
+    weekday
+    task
+    date
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateCoachPrescTask(
+  $input: UpdateCoachPrescTaskInput!
+  $condition: ModelCoachPrescTaskConditionInput
+) {
+  updateCoachPrescTask(input: $input, condition: $condition) {
+    id
+    userID
+    doctorID
+    meetingid
+    weekday
+    task
+    date
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteCoachPrescTask(
+  $input: DeleteCoachPrescTaskInput!
+  $condition: ModelCoachPrescTaskConditionInput
+) {
+  deleteCoachPrescTask(input: $input, condition: $condition) {
+    id
+    userID
+    doctorID
+    meetingid
+    weekday
+    task
+    date
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateReportsShared(
+  $input: CreateReportsSharedInput!
+  $condition: ModelReportsSharedConditionInput
+) {
+  createReportsShared(input: $input, condition: $condition) {
+    id
+    userID
+    doctorID
+    meetingid
+    date
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateReportsShared(
+  $input: UpdateReportsSharedInput!
+  $condition: ModelReportsSharedConditionInput
+) {
+  updateReportsShared(input: $input, condition: $condition) {
+    id
+    userID
+    doctorID
+    meetingid
+    date
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteReportsShared(
+  $input: DeleteReportsSharedInput!
+  $condition: ModelReportsSharedConditionInput
+) {
+  deleteReportsShared(input: $input, condition: $condition) {
+    id
+    userID
+    doctorID
+    meetingid
+    date
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateAppointment(
+  $input: CreateAppointmentInput!
+  $condition: ModelAppointmentConditionInput
+) {
+  createAppointment(input: $input, condition: $condition) {
+    id
+    userID
+    doctorID
+    paymentMode
+    packagebuyid
+    consultationfees
+    PaymentCompletionStatus
+    conultationfesscurrency
+    starttime
+    slottime
+    date
+    meetingid
+    status
+    request
+    message
+    personalConsult
+    videoconsult
+    cancelledbyuser
+    cancellationdate
+    cancelledbydoctor
+    doctortype
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateAppointment(
+  $input: UpdateAppointmentInput!
+  $condition: ModelAppointmentConditionInput
+) {
+  updateAppointment(input: $input, condition: $condition) {
+    id
+    userID
+    doctorID
+    paymentMode
+    packagebuyid
+    consultationfees
+    PaymentCompletionStatus
+    conultationfesscurrency
+    starttime
+    slottime
+    date
+    meetingid
+    status
+    request
+    message
+    personalConsult
+    videoconsult
+    cancelledbyuser
+    cancellationdate
+    cancelledbydoctor
+    doctortype
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteAppointment(
+  $input: DeleteAppointmentInput!
+  $condition: ModelAppointmentConditionInput
+) {
+  deleteAppointment(input: $input, condition: $condition) {
+    id
+    userID
+    doctorID
+    paymentMode
+    packagebuyid
+    consultationfees
+    PaymentCompletionStatus
+    conultationfesscurrency
+    starttime
+    slottime
+    date
+    meetingid
+    status
+    request
+    message
+    personalConsult
+    videoconsult
+    cancelledbyuser
+    cancellationdate
+    cancelledbydoctor
+    doctortype
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateCommunityMessage(
+  $input: CreateCommunityMessageInput!
+  $condition: ModelCommunityMessageConditionInput
+) {
+  createCommunityMessage(input: $input, condition: $condition) {
+    id
+    communityid
+    messagefrom
+    date
+    content
+    messagetype
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateCommunityMessage(
+  $input: UpdateCommunityMessageInput!
+  $condition: ModelCommunityMessageConditionInput
+) {
+  updateCommunityMessage(input: $input, condition: $condition) {
+    id
+    communityid
+    messagefrom
+    date
+    content
+    messagetype
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteCommunityMessage(
+  $input: DeleteCommunityMessageInput!
+  $condition: ModelCommunityMessageConditionInput
+) {
+  deleteCommunityMessage(input: $input, condition: $condition) {
+    id
+    communityid
+    messagefrom
+    date
+    content
+    messagetype
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateMessage(
+  $input: CreateMessageInput!
+  $condition: ModelMessageConditionInput
+) {
+  createMessage(input: $input, condition: $condition) {
+    id
+    DoctorsID
+    UserID
+    messagetype
+    content
+    currentmessage
+    readbydoctor
+    imageboolean
+    readbyuser
+    date
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateMessage(
+  $input: UpdateMessageInput!
+  $condition: ModelMessageConditionInput
+) {
+  updateMessage(input: $input, condition: $condition) {
+    id
+    DoctorsID
+    UserID
+    messagetype
+    content
+    currentmessage
+    readbydoctor
+    imageboolean
+    readbyuser
+    date
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteMessage(
+  $input: DeleteMessageInput!
+  $condition: ModelMessageConditionInput
+) {
+  deleteMessage(input: $input, condition: $condition) {
+    id
+    DoctorsID
+    UserID
+    messagetype
+    content
+    currentmessage
+    readbydoctor
+    imageboolean
+    readbyuser
+    date
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateUserDatabase(
+  $input: CreateUserDatabaseInput!
+  $condition: ModelUserDatabaseConditionInput
+) {
+  createUserDatabase(input: $input, condition: $condition) {
+    id
+    UserID
+    name
+    lastname
+    sex
+    birthday
+    hieght
+    weight
+    emailaddress
+    phonenumber
+    emergencycontact
+    streetaddress
+    city
+    zipcode
+    smoke
+    alchol
+    date
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateUserDatabase(
+  $input: UpdateUserDatabaseInput!
+  $condition: ModelUserDatabaseConditionInput
+) {
+  updateUserDatabase(input: $input, condition: $condition) {
+    id
+    UserID
+    name
+    lastname
+    sex
+    birthday
+    hieght
+    weight
+    emailaddress
+    phonenumber
+    emergencycontact
+    streetaddress
+    city
+    zipcode
+    smoke
+    alchol
+    date
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteUserDatabase(
+  $input: DeleteUserDatabaseInput!
+  $condition: ModelUserDatabaseConditionInput
+) {
+  deleteUserDatabase(input: $input, condition: $condition) {
+    id
+    UserID
+    name
+    lastname
+    sex
+    birthday
+    hieght
+    weight
+    emailaddress
+    phonenumber
+    emergencycontact
+    streetaddress
+    city
+    zipcode
+    smoke
+    alchol
+    date
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateAllergies(
+  $input: CreateAllergiesInput!
+  $condition: ModelAllergiesConditionInput
+) {
+  createAllergies(input: $input, condition: $condition) {
+    id
+    userid
+    allergyname
+    description
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateAllergies(
+  $input: UpdateAllergiesInput!
+  $condition: ModelAllergiesConditionInput
+) {
+  updateAllergies(input: $input, condition: $condition) {
+    id
+    userid
+    allergyname
+    description
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteAllergies(
+  $input: DeleteAllergiesInput!
+  $condition: ModelAllergiesConditionInput
+) {
+  deleteAllergies(input: $input, condition: $condition) {
+    id
+    userid
+    allergyname
+    description
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateExperience(
+  $input: CreateExperienceInput!
+  $condition: ModelExperienceConditionInput
+) {
+  createExperience(input: $input, condition: $condition) {
+    id
+    doctorID
+    Title
+    CompanyName
+    location
+    doctortype
+    Description
+    startdate
+    enddate
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateExperience(
+  $input: UpdateExperienceInput!
+  $condition: ModelExperienceConditionInput
+) {
+  updateExperience(input: $input, condition: $condition) {
+    id
+    doctorID
+    Title
+    CompanyName
+    location
+    doctortype
+    Description
+    startdate
+    enddate
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteExperience(
+  $input: DeleteExperienceInput!
+  $condition: ModelExperienceConditionInput
+) {
+  deleteExperience(input: $input, condition: $condition) {
+    id
+    doctorID
+    Title
+    CompanyName
+    location
+    doctortype
+    Description
+    startdate
+    enddate
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateDoctor(
+  $input: CreateDoctorInput!
+  $condition: ModelDoctorConditionInput
+) {
+  createDoctor(input: $input, condition: $condition) {
+    id
+    UserID
+    doctortype
+    name
+    about
+    npi
+    languagesspoken
+    country
+    localaddress
+    paycut
+    state
+    zipcode
+    specialization
+    yearsofexxperience
+    gender
+    status
+    insurance
+    offlineconsultation
+    appointmentscompleted
+    viewsonprofile
+    education {
+      nextToken
+    }
+    experience {
+      nextToken
+    }
+    certificates {
+      nextToken
+    }
+    appointment {
+      nextToken
+    }
+    message {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateDoctor(
+  $input: UpdateDoctorInput!
+  $condition: ModelDoctorConditionInput
+) {
+  updateDoctor(input: $input, condition: $condition) {
+    id
+    UserID
+    doctortype
+    name
+    about
+    npi
+    languagesspoken
+    country
+    localaddress
+    paycut
+    state
+    zipcode
+    specialization
+    yearsofexxperience
+    gender
+    status
+    insurance
+    offlineconsultation
+    appointmentscompleted
+    viewsonprofile
+    education {
+      nextToken
+    }
+    experience {
+      nextToken
+    }
+    certificates {
+      nextToken
+    }
+    appointment {
+      nextToken
+    }
+    message {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteDoctor(
+  $input: DeleteDoctorInput!
+  $condition: ModelDoctorConditionInput
+) {
+  deleteDoctor(input: $input, condition: $condition) {
+    id
+    UserID
+    doctortype
+    name
+    about
+    npi
+    languagesspoken
+    country
+    localaddress
+    paycut
+    state
+    zipcode
+    specialization
+    yearsofexxperience
+    gender
+    status
+    insurance
+    offlineconsultation
+    appointmentscompleted
+    viewsonprofile
+    education {
+      nextToken
+    }
+    experience {
+      nextToken
+    }
+    certificates {
+      nextToken
+    }
+    appointment {
+      nextToken
+    }
+    message {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateCertificates(
+  $input: CreateCertificatesInput!
+  $condition: ModelCertificatesConditionInput
+) {
+  createCertificates(input: $input, condition: $condition) {
+    id
+    doctorID
+    imageurl
+    description
+    doctortype
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateCertificates(
+  $input: UpdateCertificatesInput!
+  $condition: ModelCertificatesConditionInput
+) {
+  updateCertificates(input: $input, condition: $condition) {
+    id
+    doctorID
+    imageurl
+    description
+    doctortype
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteCertificates(
+  $input: DeleteCertificatesInput!
+  $condition: ModelCertificatesConditionInput
+) {
+  deleteCertificates(input: $input, condition: $condition) {
+    id
+    doctorID
+    imageurl
+    description
+    doctortype
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateSlots(
+  $input: CreateSlotsInput!
+  $condition: ModelSlotsConditionInput
+) {
+  createSlots(input: $input, condition: $condition) {
+    id
+    doctorID
+    consulttime
+    starttime
+    endtime
+    consultationfees
+    conultationfesscurrency
+    videoconsultations
+    inpersonconsultation
+    videoandinpersonconsultation
+    consultationtimeedit
+    monday
+    tuesday
+    wednesday
+    thursday
+    friday
+    saturday
+    sunday
+    activeinactive
+    doctortype
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateSlots(
+  $input: UpdateSlotsInput!
+  $condition: ModelSlotsConditionInput
+) {
+  updateSlots(input: $input, condition: $condition) {
+    id
+    doctorID
+    consulttime
+    starttime
+    endtime
+    consultationfees
+    conultationfesscurrency
+    videoconsultations
+    inpersonconsultation
+    videoandinpersonconsultation
+    consultationtimeedit
+    monday
+    tuesday
+    wednesday
+    thursday
+    friday
+    saturday
+    sunday
+    activeinactive
+    doctortype
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteSlots(
+  $input: DeleteSlotsInput!
+  $condition: ModelSlotsConditionInput
+) {
+  deleteSlots(input: $input, condition: $condition) {
+    id
+    doctorID
+    consulttime
+    starttime
+    endtime
+    consultationfees
+    conultationfesscurrency
+    videoconsultations
+    inpersonconsultation
+    videoandinpersonconsultation
+    consultationtimeedit
+    monday
+    tuesday
+    wednesday
+    thursday
+    friday
+    saturday
+    sunday
+    activeinactive
+    doctortype
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateInvite(
+  $input: CreateInviteInput!
+  $condition: ModelInviteConditionInput
+) {
+  createInvite(input: $input, condition: $condition) {
+    id
+    doctorID
+    UserID
+    message
+    invite
+    date
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateInvite(
+  $input: UpdateInviteInput!
+  $condition: ModelInviteConditionInput
+) {
+  updateInvite(input: $input, condition: $condition) {
+    id
+    doctorID
+    UserID
+    message
+    invite
+    date
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteInvite(
+  $input: DeleteInviteInput!
+  $condition: ModelInviteConditionInput
+) {
+  deleteInvite(input: $input, condition: $condition) {
+    id
+    doctorID
+    UserID
+    message
+    invite
+    date
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateEducation(
+  $input: CreateEducationInput!
+  $condition: ModelEducationConditionInput
+) {
+  createEducation(input: $input, condition: $condition) {
+    id
+    doctorID
+    nameofuniversity
+    fieldofstudy
+    doctortype
+    degree
+    startdate
+    enddate
+    gradepoint
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateEducation(
+  $input: UpdateEducationInput!
+  $condition: ModelEducationConditionInput
+) {
+  updateEducation(input: $input, condition: $condition) {
+    id
+    doctorID
+    nameofuniversity
+    fieldofstudy
+    doctortype
+    degree
+    startdate
+    enddate
+    gradepoint
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteEducation(
+  $input: DeleteEducationInput!
+  $condition: ModelEducationConditionInput
+) {
+  deleteEducation(input: $input, condition: $condition) {
+    id
+    doctorID
+    nameofuniversity
+    fieldofstudy
+    doctortype
+    degree
+    startdate
+    enddate
+    gradepoint
+    createdAt
+    updatedAt
+  }
+}
