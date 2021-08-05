@@ -40,21 +40,26 @@ export class AppComponent implements OnInit {
     try {
       const { user } = await Auth.confirmSignUp('rk507922@gmail.com', this.otp);
       console.log(user);
-      Auth.currentUserPoolUser()
-        .then(user => {
-          console.log(user)
+      Auth.currentAuthenticatedUser()
+        .then(async user => {
+          console.log(user.username);
+          await this.create(user.username)
         })
         .then(data => console.log(data))
         .catch(err => console.log(err));
+        // .then(user => {
+        //   console.log(user)
+        // })
+        // .then(data => console.log(data))
+        // .catch(err => console.log(err));
     } catch (error) {
       console.log('error confirming sign up', error);
     }
   }
 
-  async create(): Promise<any>{
+  async create(userId: any): Promise<any>{
     try {
-      this.api.CreateUserDatabase({UserID: ""})
-      await Auth.confirmSignUp('rk507922@gmail.com', this.otp);
+      this.api.CreateUserDatabase({UserID: userId})
     } catch (error) {
       console.log('error confirming sign up', error);
     }
@@ -65,6 +70,15 @@ export class AppComponent implements OnInit {
       console.log('code resent successfully');
     } catch (err) {
       console.log('error resending code: ', err);
+    }
+  }
+
+  async signIn(): Promise<any> {
+    try {
+      const user = await Auth.signIn('rk507922@gmail.com', '12345678978');
+      console.log(user);
+    } catch (error) {
+      console.log('error signing in', error);
     }
   }
 
