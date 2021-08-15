@@ -1,0 +1,63 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
+               [opened]="!(isHandset$ | async)"
+               class="sidenav" fixedInViewport>
+
+
+    <mat-nav-list>
+<!--      <div style="height: 70px">-->
+<!--        <img *ngIf="clientLogo" class="client_logo" [src]="clientLogo" alt="" style="max-height: 100%">-->
+<!--      </div>-->
+
+        <a
+           class="" mat-list-item style="height: 60px">
+        <span class="image_menu">
+
+<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 200 200">
+  <defs>
+    <clipPath id="clip-logout">
+      <rect width="200" height="200"/>
+    </clipPath>
+  </defs>
+  <g id="logout" clip-path="url(#clip-logout)">
+    <g id="Layer_2" data-name="Layer 2" transform="translate(20.998 7.995)">
+      <g id="Layer_1" data-name="Layer 1" transform="translate(0.002 0.005)">
+        <path id="Path_265" data-name="Path 265" d="M110.377,64.06H92.21V19.1H19.336v145.77H91.98V120.193h18.144c0,16.258.851,32.631-.345,48.866-.69,9.2-8.072,14.763-17.661,14.855-24.491.276-49,.391-73.587,0-11.383-.184-18.4-7.543-18.4-19.247Q-.141,92.276.158,19.931C.2,7.168,7.4.315,20.417.177q35.046-.345,70.068,0c12.372.138,19.477,6.9,19.822,19.041C110.7,33.728,110.377,48.285,110.377,64.06Z" transform="translate(-0.002 -0.005)" fill="var(--main-color)"/>
+        <path id="Path_266" data-name="Path 266" d="M86.15,91.063V71.494H30.5V45.439H86.081V25.87l32.654,32.493Z" transform="translate(39.632 33.609)" fill="var(--main-color)"/>
+      </g>
+    </g>
+  </g>
+</svg>
+
+        </span> Logout
+        </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <button (click)="drawer.toggle()" *ngIf="(isHandset$ | async)"
+            aria-label="Toggle sidenav"
+            mat-icon-button
+            style="margin-left: 20px"
+            type="button">
+      <svg viewBox="0 0 82.88 24.6" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <style>.cls-1 {
+            fill: none;
+            stroke-miterlimit: 10;
+            stroke-width: 5.67px;
+          }</style>
+        </defs>
+        <g data-name="Layer 2" id="Layer_2">
+          <g data-name="Layer 1" id="Layer_1-2">
+            <line class="theme-color-stroke cls-1" x2="82.88" y1="2.83" y2="2.83"/>
+            <line class="theme-color-stroke cls-1" x2="82.88" y1="21.76" y2="21.76"/>
+          </g>
+        </g>
+      </svg>
+    </button>
+    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<!--<app-notification-window></app-notification-window>-->

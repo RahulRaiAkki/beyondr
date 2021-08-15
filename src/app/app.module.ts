@@ -5,18 +5,25 @@ import { AppComponent } from './app.component';
 import {AmplifyAngularModule, AmplifyService} from "aws-amplify-angular";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule} from "@angular/forms";
+import {MatSidenavModule} from "@angular/material/sidenav";
+import {MatListModule} from "@angular/material/list";
+import {AuthService} from "./utils/auth.service";
+import {AppRoutingModule} from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
   ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        AmplifyAngularModule,
-        FormsModule
-    ],
-  providers: [AmplifyService],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    AmplifyAngularModule,
+    FormsModule,
+    AppRoutingModule,
+    MatSidenavModule,
+    MatListModule
+  ],
+  providers: [AmplifyService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

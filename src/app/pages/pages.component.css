@@ -1,0 +1,41 @@
+mat-list-item {
+  color: pink!important;
+}
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 145px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.mat-toolbar.mat-primary {
+  background: #fff;
+  color: #000;
+}
+.mat-drawer{
+  background: #2C2B3D;
+}
+.image_menu{
+  width: 22px;
+  margin: 10px;
+}
+.client_logo{
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  margin: 0 auto 25px;
+}
+
+
+
