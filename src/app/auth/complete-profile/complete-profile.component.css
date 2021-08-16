@@ -1,0 +1,33 @@
+.custom-button{
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+}
+.custom-button img{
+  width: 100%;
+  max-width: 50px;
+}
+.active{
+  background: #00BFD9 !important;
+}
+mat-form-field{
+  width: 100%;
+}
+.allergy-item{
+  background: #A1CCD1;
+  padding: 10px;
+  border-radius: 10px;
+  flex-basis: 100px;
+}
+.mat-button-toggle{
+  width: 50%;
+}
+.selected-option{
+  background: #F6F7F9;
+  padding: 5px 10px;
+  border: #707070;
+  border-radius: 8px;
+}
