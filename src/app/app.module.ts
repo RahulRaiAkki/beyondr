@@ -9,6 +9,7 @@ import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatListModule} from "@angular/material/list";
 import {AuthService} from "./utils/auth.service";
 import {AppRoutingModule} from './app-routing.module';
+import {MatNativeDateModule} from "@angular/material/core";
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import {AppRoutingModule} from './app-routing.module';
     FormsModule,
     AppRoutingModule,
     MatSidenavModule,
+    MatNativeDateModule,
     MatListModule
   ],
   providers: [AmplifyService, AuthService],

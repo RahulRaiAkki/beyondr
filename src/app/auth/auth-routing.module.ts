@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
 import {PreLoginComponent} from "./pre-login/pre-login.component";
+import {CompleteProfileComponent} from "./complete-profile/complete-profile.component";
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'login-home',
     component: PreLoginComponent,
+  },
+  {
+    path: 'complete-profile',
+    component: CompleteProfileComponent,
   },
   {path: '', redirectTo: 'login-home', pathMatch: 'full'},
   {path: '**', redirectTo: 'login'},

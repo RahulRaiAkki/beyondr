@@ -15,10 +15,17 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatRadioModule} from "@angular/material/radio";
 import { PreLoginComponent } from './pre-login/pre-login.component';
+import { CompleteProfileComponent } from './complete-profile/complete-profile.component';
+import {NgOtpInputModule} from "ng-otp-input";
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatSelectModule} from "@angular/material/select";
+import {MatOptionModule} from "@angular/material/core";
+import {MatButtonToggleModule} from "@angular/material/button-toggle";
+import {MatListModule} from "@angular/material/list";
 
 
 @NgModule({
-  declarations: [LoginComponent, RegisterComponent, PreLoginComponent],
+  declarations: [LoginComponent, RegisterComponent, PreLoginComponent, CompleteProfileComponent],
   imports: [
     CommonModule,
     AuthRoutingModule,
@@ -32,6 +39,12 @@ import { PreLoginComponent } from './pre-login/pre-login.component';
     MatProgressSpinnerModule,
     MatCheckboxModule,
     MatRadioModule,
+    NgOtpInputModule,
+    MatDatepickerModule,
+    MatSelectModule,
+    MatOptionModule,
+    MatButtonToggleModule,
+    MatListModule,
   ]
 })
 export class AuthModule { }

@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
+  showVerifyOtp = false;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onOtpChange(otp: string | any[]) {
+    console.log(otp)
+    if (otp.length === 6) {
+    }
   }
 
 }

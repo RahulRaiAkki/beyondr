@@ -1,0 +1,18 @@
+.custom-button{
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+}
+.custom-button img{
+  width: 100%;
+  max-width: 50px;
+}
+.active{
+  background: #00BFD9;
+}
+mat-form-field{
+  width: 100%;
+}

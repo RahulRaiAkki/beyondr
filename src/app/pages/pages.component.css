@@ -3,10 +3,11 @@ mat-list-item {
 }
 .sidenav-container {
   height: 100%;
+  border: 1px solid #E8E8E8
 }
 
 .sidenav {
-  width: 145px;
+  width: 300px;
 }
 
 .sidenav .mat-toolbar {
@@ -24,7 +25,7 @@ mat-list-item {
   color: #000;
 }
 .mat-drawer{
-  background: #2C2B3D;
+  /*background: #2C2B3D;*/
 }
 .image_menu{
   width: 22px;

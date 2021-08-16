@@ -1,36 +1,158 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
+  <mat-sidenav #drawer [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+               [mode]="(isHandset$ | async) ? 'over' : 'side'"
                [opened]="!(isHandset$ | async)"
                class="sidenav" fixedInViewport>
 
 
     <mat-nav-list>
-<!--      <div style="height: 70px">-->
-<!--        <img *ngIf="clientLogo" class="client_logo" [src]="clientLogo" alt="" style="max-height: 100%">-->
-<!--      </div>-->
+      <div style="height: 70px">
+        <img alt="" class="client_logo" src="assets/images/logo.png" style="max-height: 100%">
+      </div>
 
-        <a
-           class="" mat-list-item style="height: 60px">
+      <a
+        class="" mat-list-item style="height: 60px">
         <span class="image_menu">
+          <svg height="21.217" viewBox="0 0 19.235 21.217" width="19.235" xmlns="http://www.w3.org/2000/svg">
+  <g data-name="Icon feather-home" id="Icon_feather-home" transform="translate(-3.8 -2.3)">
+    <path d="M4.5,9.936,13.417,3l8.917,6.936v10.9a1.982,1.982,0,0,1-1.982,1.982H6.482A1.982,1.982,0,0,1,4.5,20.835Z"
+          data-name="Path 1157"
+          fill="none"
+          id="Path_1157" stroke="#639ced" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"
+          transform="translate(0 0)"/>
+    <path d="M13.5,27.908V18h5.945v9.908" data-name="Path 1158" fill="none" id="Path_1158"
+          stroke="#639ced" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"
+          transform="translate(-3.055 -5.092)"/>
+  </g>
+</svg>
+        </span> Home
+      </a>
 
-<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 200 200">
-  <defs>
-    <clipPath id="clip-logout">
-      <rect width="200" height="200"/>
-    </clipPath>
-  </defs>
-  <g id="logout" clip-path="url(#clip-logout)">
-    <g id="Layer_2" data-name="Layer 2" transform="translate(20.998 7.995)">
-      <g id="Layer_1" data-name="Layer 1" transform="translate(0.002 0.005)">
-        <path id="Path_265" data-name="Path 265" d="M110.377,64.06H92.21V19.1H19.336v145.77H91.98V120.193h18.144c0,16.258.851,32.631-.345,48.866-.69,9.2-8.072,14.763-17.661,14.855-24.491.276-49,.391-73.587,0-11.383-.184-18.4-7.543-18.4-19.247Q-.141,92.276.158,19.931C.2,7.168,7.4.315,20.417.177q35.046-.345,70.068,0c12.372.138,19.477,6.9,19.822,19.041C110.7,33.728,110.377,48.285,110.377,64.06Z" transform="translate(-0.002 -0.005)" fill="var(--main-color)"/>
-        <path id="Path_266" data-name="Path 266" d="M86.15,91.063V71.494H30.5V45.439H86.081V25.87l32.654,32.493Z" transform="translate(39.632 33.609)" fill="var(--main-color)"/>
-      </g>
-    </g>
+      <a
+        class="" mat-list-item style="height: 60px">
+        <span class="image_menu">
+          <svg height="19.154" viewBox="0 0 17.382 19.154" width="17.382" xmlns="http://www.w3.org/2000/svg">
+  <g data-name="Icon feather-bell" id="Icon_feather-bell" transform="translate(-3.8 -2.3)">
+    <path d="M17.818,8.327a5.327,5.327,0,1,0-10.655,0c0,6.215-2.664,7.991-2.664,7.991H20.482s-2.664-1.776-2.664-7.991"
+          data-name="Path 1163"
+          fill="none"
+          id="Path_1163" stroke="#959595" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"
+          transform="translate(0 0)"/>
+    <path d="M18.477,31.5a1.776,1.776,0,0,1-3.072,0" data-name="Path 1164" fill="none"
+          id="Path_1164" stroke="#959595" stroke-linecap="round" stroke-linejoin="round"
+          stroke-width="1.4" transform="translate(-4.45 -11.63)"/>
+  </g>
+</svg>
+        </span> Notification
+      </a>
+
+      <a
+        class="" mat-list-item style="height: 60px">
+        <span class="image_menu">
+          <svg height="21.029" viewBox="0 0 19.066 21.029" width="19.066" xmlns="http://www.w3.org/2000/svg">
+  <g data-name="Icon feather-calendar" id="Icon_feather-calendar" transform="translate(-3.8 -2.3)">
+    <path
+      d="M6.463,6H20.2a1.963,1.963,0,0,1,1.963,1.963V21.7A1.963,1.963,0,0,1,20.2,23.666H6.463A1.963,1.963,0,0,1,4.5,21.7V7.963A1.963,1.963,0,0,1,6.463,6Z"
+      data-name="Path 1159"
+      fill="none"
+      id="Path_1159" stroke="#959595" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"
+      transform="translate(0 -1.037)"/>
+    <path d="M24,3V6.926" data-name="Path 1160" fill="none" id="Path_1160" stroke="#959595"
+          stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" transform="translate(-6.741 0)"/>
+    <path d="M12,3V6.926" data-name="Path 1161" fill="none" id="Path_1161" stroke="#959595"
+          stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" transform="translate(-2.593 0)"/>
+    <path d="M4.5,15H22.166" data-name="Path 1162" fill="none" id="Path_1162" stroke="#959595"
+          stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" transform="translate(0 -4.148)"/>
+  </g>
+</svg>
+        </span> Calendar
+      </a>
+
+      <a
+        class="" mat-list-item style="height: 60px">
+        <span class="image_menu">
+          <svg height="23.486" viewBox="0 0 21.529 23.486" width="21.529" xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="M25.441,13.214a.992.992,0,1,0-.291.688.94.94,0,0,0,.291-.688Zm1.957,0a2.821,2.821,0,0,1-.543,1.7,2.982,2.982,0,0,1-1.414,1.07v6.04a5.281,5.281,0,0,1-2.011,4.151,7.2,7.2,0,0,1-4.839,1.72,7.2,7.2,0,0,1-4.839-1.72,5.281,5.281,0,0,1-2.011-4.151V20a7.01,7.01,0,0,1-4.19-1.957,5.235,5.235,0,0,1-1.682-3.853V6.364a.992.992,0,0,1,.979-.979,1.315,1.315,0,0,1,.245.031,1.985,1.985,0,0,1,.719-.734,1.954,1.954,0,0,1,2.951,1.682A1.958,1.958,0,0,1,8.805,8.321a1.924,1.924,0,0,1-.979-.275v6.147a3.437,3.437,0,0,0,1.437,2.768,5.369,5.369,0,0,0,3.456,1.147,5.369,5.369,0,0,0,3.456-1.147,3.437,3.437,0,0,0,1.437-2.768V8.046a1.924,1.924,0,0,1-.979.275,1.958,1.958,0,0,1-1.957-1.957,1.952,1.952,0,0,1,2.951-1.682,1.985,1.985,0,0,1,.719.734,1.315,1.315,0,0,1,.245-.031.992.992,0,0,1,.979.979v7.829a5.235,5.235,0,0,1-1.682,3.853A7.01,7.01,0,0,1,13.7,20v2.018a3.437,3.437,0,0,0,1.437,2.768,5.369,5.369,0,0,0,3.456,1.147,5.369,5.369,0,0,0,3.456-1.147,3.437,3.437,0,0,0,1.437-2.768v-6.04a2.982,2.982,0,0,1-1.414-1.07,2.941,2.941,0,0,1,.313-3.777,2.936,2.936,0,0,1,5.015,2.08Z"
+    data-name="Icon metro-stethoscope"
+    fill="#aaa"
+    id="Icon_metro-stethoscope" transform="translate(-5.869 -4.407)"/>
+</svg>
+
+        </span> Enter as a Doctor
+      </a>
+
+      <a
+        class="" mat-list-item style="height: 60px">
+        <span class="image_menu">
+          <svg height="23.9" viewBox="0 0 19.4 23.9" width="19.4" xmlns="http://www.w3.org/2000/svg">
+  <g data-name="Icon feather-share" id="Icon_feather-share" transform="translate(-5.3 -2.3)">
+    <path d="M6,18v9a2.25,2.25,0,0,0,2.25,2.25h13.5A2.25,2.25,0,0,0,24,27V18" data-name="Path 1862" fill="none"
+          id="Path_1862" stroke="#959595" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"
+          transform="translate(0 -3.75)"/>
+    <path d="M21,7.5,16.5,3,12,7.5" data-name="Path 1863" fill="none" id="Path_1863" stroke="#959595"
+          stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" transform="translate(-1.5)"/>
+    <path d="M18,3V17.625" data-name="Path 1864" fill="none" id="Path_1864" stroke="#959595" stroke-linecap="round"
+          stroke-linejoin="round" stroke-width="1.4" transform="translate(-3)"/>
   </g>
 </svg>
 
+
+        </span> Invitation
+      </a>
+
+      <a
+        class="" mat-list-item style="height: 60px">
+        <span class="image_menu">
+          <svg height="19.4" viewBox="0 0 19.4 19.4" width="19.4" xmlns="http://www.w3.org/2000/svg">
+  <g data-name="Icon feather-headphones" id="Icon_feather-headphones" transform="translate(-3.8 -3.8)">
+    <path d="M4.5,19.5v-6a9,9,0,1,1,18,0v6" data-name="Path 1865" fill="none" id="Path_1865" stroke="#959595"
+          stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+    <path
+      d="M22.5,26a2,2,0,0,1-2,2h-1a2,2,0,0,1-2-2V23a2,2,0,0,1,2-2h3Zm-18,0a2,2,0,0,0,2,2h1a2,2,0,0,0,2-2V23a2,2,0,0,0-2-2h-3Z"
+      data-name="Path 1866"
+      fill="none"
+      id="Path_1866" stroke="#959595" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"
+      transform="translate(0 -5.5)"/>
+  </g>
+</svg>
+
+
+        </span> Contact us
+      </a>
+
+      <a
+        class="" mat-list-item style="height: 60px">
+        <span class="image_menu">
+          <svg height="17.4" viewBox="0 0 19.4 17.4" width="19.4" xmlns="http://www.w3.org/2000/svg">
+  <g id="briefcase" transform="translate(-1.3 -2.3)">
+    <rect data-name="Rectangle 252" fill="none" height="12" id="Rectangle_252" rx="2" stroke="#959595"
+          stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" transform="translate(2 7)" width="18"/>
+    <path d="M15.026,18.809V4.757A1.757,1.757,0,0,0,13.27,3H9.757A1.757,1.757,0,0,0,8,4.757V18.809"
+          data-name="Path 1869"
+          fill="none"
+          id="Path_1869" stroke="#959595" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"
+          transform="translate(-0.73)"/>
+  </g>
+</svg>
+        </span> Enter as a Coach
+      </a>
+
+      <a
+        class="" mat-list-item style="height: 60px">
+        <span class="image_menu">
+          <svg height="19.4" viewBox="0 0 19.4 19.4" width="19.4" xmlns="http://www.w3.org/2000/svg">
+  <g id="log-out" transform="translate(-2.3 -2.3)">
+    <path d="M9,21H5a2,2,0,0,1-2-2V5A2,2,0,0,1,5,3H9" data-name="Path 1867" fill="none" id="Path_1867" stroke="#959595"
+          stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+    <path d="M16,17l5-5L16,7" data-name="Path 1868" fill="none" id="Path_1868" stroke="#959595" stroke-linecap="round"
+          stroke-linejoin="round" stroke-width="1.4"/>
+    <line data-name="Line 2" fill="none" id="Line_2" stroke="#959595" stroke-linecap="round" stroke-linejoin="round"
+          stroke-width="1.4" transform="translate(9 12)" x1="12"/>
+  </g>
+</svg>
         </span> Logout
-        </a>
+      </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

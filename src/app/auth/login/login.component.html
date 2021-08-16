@@ -57,17 +57,17 @@
                     <p>Sign in to continue</p>
                     <mat-form-field appearance="outline">
                       <mat-label>Email</mat-label>
-                      <input matInput >
+                      <input matInput [(ngModel)]="email">
                       <img matSuffix src="assets/images/email-icon.png" class="input-icon" />
                     </mat-form-field>
                     <br>
                     <mat-form-field appearance="outline">
                       <mat-label>Password</mat-label>
-                      <input matInput  type="password">
+                      <input matInput  type="password"  [(ngModel)]="password">
                       <img matSuffix src="assets/images/lock-icon.png" class="input-icon" />
                     </mat-form-field>
                     <br>
-                    <button mat-raised-button color="primary"  class="w-100">
+                    <button mat-raised-button color="primary"  class="w-100" (click)="signIn()">
                       Next
                     </button>
                   </div>
