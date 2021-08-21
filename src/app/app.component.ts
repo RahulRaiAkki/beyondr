@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import { API } from 'aws-amplify';
 import {APIService} from "./API.service";
 import { Auth } from 'aws-amplify';
 

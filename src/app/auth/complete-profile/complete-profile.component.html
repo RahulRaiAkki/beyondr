@@ -19,9 +19,9 @@
           <div class="col-5 d-flex align-items-center">
             <mat-card class="dashboard-card w-100">
               <div class="d-flex">
-                <h4 class="mr-2"><span class="selected-option active">1</span>Personal Details</h4>
-                <h4 class="mr-2"><span class="selected-option">2</span>Contact Details</h4>
-                <h4><span class="selected-option">3</span>Health Record</h4>
+                <h4 class="mr-2"><span [class]="'selected-option '+ (type === 'personal-detail' ? 'active' : '')">1</span>Personal Details</h4>
+                <h4 class="mr-2"><span [class]="'selected-option ' + (type === 'contact-detail' ? 'active' : '')">2</span>Contact Details</h4>
+                <h4><span [class]="'selected-option ' + (type === 'health-record' ? 'active' : '')">3</span>Health Record</h4>
               </div>
               <hr>
               <mat-card-content class="dashboard-card-content">
@@ -66,7 +66,7 @@
                     </mat-form-field>
                     <br>
 
-                    <button mat-raised-button color="primary" class="w-100">
+                    <button mat-raised-button color="primary" class="w-100" (click)="personalDetails()">
                       Next
                     </button>
                   </div>
@@ -112,7 +112,7 @@
                     </mat-form-field>
                     <br>
 
-                    <button mat-raised-button color="primary" class="w-100">
+                    <button mat-raised-button color="primary" class="w-100" (click)="contactDetails()">
                       Next
                     </button>
                   </div>
@@ -140,13 +140,18 @@
                       </mat-form-field>
                       <button mat-stroked-button (click)="addCookie(input.value)">ADD+</button>
                     </div>
+
+                    <h4>Add personal health records</h4>
+                    <div class="d-flex">
+                      <button mat-stroked-button (click)="addHealthRecords(healthDialog)">ADD+</button>
+                    </div>
                     <div class="d-flex list-allergies">
                       <div *ngFor="let item of items" class="allergy-item">
                         {{item}}
                       </div>
                     </div>
                     <br>
-                    <button mat-raised-button color="primary" class="w-100">
+                    <button mat-raised-button color="primary" class="w-100" (click)="healthDetails()">
                       Next
                     </button>
                   </div>
@@ -162,3 +167,18 @@
 
   </div>
 </div>
+
+<ng-container #healthDialog>
+  <h1 mat-dialog-title>Hi </h1>
+  <div mat-dialog-content>
+    <p>What's your favorite animal?</p>
+    <mat-form-field appearance="fill">
+      <mat-label>Favorite Animal</mat-label>
+      <input matInput >
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button cdkFocusInitial>Save</button>
+  </div>
+</ng-container>

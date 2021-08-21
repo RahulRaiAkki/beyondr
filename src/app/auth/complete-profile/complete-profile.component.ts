@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, TemplateRef} from '@angular/core';
+import {APIService, CreateUserInput} from "../../API.service";
+import {MatDialog} from "@angular/material/dialog";
+
 
 @Component({
   selector: 'app-complete-user-details',
@@ -7,16 +10,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompleteProfileComponent implements OnInit {
 
-  type = 'contact-detail';
+  type = 'health-record';
   items = [];
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
   addCookie(val: any) {
     // @ts-ignore
     this.items.push(val);
+  }
+
+  personalDetails() {
+  }
+
+  contactDetails() {
+  }
+
+  healthDetails() {
+  }
+
+  addHealthRecords(healthDialog: TemplateRef<any>) {
+    const dialogRef = this.dialog.open(healthDialog);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 
 }

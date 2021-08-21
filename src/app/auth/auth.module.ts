@@ -22,29 +22,31 @@ import {MatSelectModule} from "@angular/material/select";
 import {MatOptionModule} from "@angular/material/core";
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import {MatListModule} from "@angular/material/list";
+import {MatDialogModule} from "@angular/material/dialog";
 
 
 @NgModule({
   declarations: [LoginComponent, RegisterComponent, PreLoginComponent, CompleteProfileComponent],
-  imports: [
-    CommonModule,
-    AuthRoutingModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatIconModule,
-    MatInputModule,
-    MatButtonModule,
-    FormsModule,
-    MatSnackBarModule,
-    MatProgressSpinnerModule,
-    MatCheckboxModule,
-    MatRadioModule,
-    NgOtpInputModule,
-    MatDatepickerModule,
-    MatSelectModule,
-    MatOptionModule,
-    MatButtonToggleModule,
-    MatListModule,
-  ]
+    imports: [
+        CommonModule,
+        AuthRoutingModule,
+        MatCardModule,
+        MatFormFieldModule,
+        MatIconModule,
+        MatInputModule,
+        MatButtonModule,
+        FormsModule,
+        MatSnackBarModule,
+        MatProgressSpinnerModule,
+        MatCheckboxModule,
+        MatRadioModule,
+        NgOtpInputModule,
+        MatDatepickerModule,
+        MatSelectModule,
+        MatOptionModule,
+        MatButtonToggleModule,
+        MatListModule,
+        MatDialogModule,
+    ]
 })
 export class AuthModule { }
