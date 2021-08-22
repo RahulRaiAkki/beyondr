@@ -4,6 +4,7 @@ import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
 import {PreLoginComponent} from "./pre-login/pre-login.component";
 import {CompleteProfileComponent} from "./complete-profile/complete-profile.component";
+import {DoctorCoachProfileComponent} from "./doctor-coach-profile/doctor-coach-profile.component";
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'complete-profile',
     component: CompleteProfileComponent,
+  },
+  {
+    path: 'doc-coach-profile',
+    component: DoctorCoachProfileComponent,
   },
   {path: '', redirectTo: 'login-home', pathMatch: 'full'},
   {path: '**', redirectTo: 'login'},

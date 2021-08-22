@@ -27,13 +27,23 @@
               <mat-card-content class="dashboard-card-content">
                 <ng-container *ngIf="type === 'personal-detail'">
                   <div class="">
-                    <mat-form-field appearance="outline">
-                      <mat-label>Name</mat-label>
-                      <input matInput>
-                    </mat-form-field>
+                    <div class="d-flex">
+                      <mat-form-field appearance="outline" class="mr-2">
+                        <mat-label>Name</mat-label>
+                        <input matInput [(ngModel)]="createUserDatabaseInput.name">
+                      </mat-form-field>
+
+                      <label class="hoverable" for="fileInput">
+                        <img [src]="profileImage ? profileImage : 'https://www.w3schools.com/howto/img_avatar.png'">
+                        <div class="hover-text">Choose file</div>
+                        <div class="background"></div>
+                      </label>
+                      <br/>
+                      <input #target id="fileInput" type='file' (change)="onSelectFile(target)">
+                    </div>
                     <br>
                     <h4>Gender</h4>
-                    <mat-radio-group aria-label="Select an option">
+                    <mat-radio-group aria-label="Select an option" [(ngModel)]="createUserDatabaseInput.sex">
                       <mat-radio-button value="Male" class="mr-2">Male</mat-radio-button>
                       <mat-radio-button value="Female" class="mr-2">Female</mat-radio-button>
                       <mat-radio-button value="Other">Other</mat-radio-button>
@@ -42,7 +52,7 @@
                     <br>
                     <mat-form-field appearance="fill">
                       <mat-label>Choose a date</mat-label>
-                      <input matInput [matDatepicker]="picker">
+                      <input matInput [matDatepicker]="picker" [(ngModel)]="createUserDatabaseInput.birthday">
                       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                       <mat-datepicker #picker></mat-datepicker>
                     </mat-form-field>
@@ -57,12 +67,12 @@
                     <br>
                     <mat-form-field appearance="outline">
                       <mat-label>Height(Ft)</mat-label>
-                      <input matInput>
+                      <input matInput [(ngModel)]="createUserDatabaseInput.hieght">
                     </mat-form-field>
                     <br>
                     <mat-form-field appearance="outline">
                       <mat-label>Weight (Kg)</mat-label>
-                      <input matInput>
+                      <input matInput [(ngModel)]="createUserDatabaseInput.weight">
                     </mat-form-field>
                     <br>
 
@@ -74,41 +84,34 @@
                 <ng-container *ngIf="type === 'contact-detail'">
                   <div class="">
                     <mat-form-field appearance="outline">
-                      <mat-label>Name</mat-label>
-                      <input matInput>
-                    </mat-form-field>
-                    <br>
-                    <h4>Gender</h4>
-                    <mat-radio-group aria-label="Select an option">
-                      <mat-radio-button value="Male" class="mr-2">Male</mat-radio-button>
-                      <mat-radio-button value="Female" class="mr-2">Female</mat-radio-button>
-                      <mat-radio-button value="Other">Other</mat-radio-button>
-                    </mat-radio-group>
-                    <br>
-                    <br>
-                    <mat-form-field appearance="fill">
-                      <mat-label>Choose a date</mat-label>
-                      <input matInput [matDatepicker]="picker">
-                      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                      <mat-datepicker #picker></mat-datepicker>
-                    </mat-form-field>
-                    <br>
-                    <mat-form-field appearance="fill">
-                      <mat-label>What is your relationship status</mat-label>
-                      <mat-select>
-                        <mat-option>Single</mat-option>
-                        <mat-option>Married</mat-option>
-                      </mat-select>
+                      <mat-label>E-Mail Address</mat-label>
+                      <input matInput [(ngModel)]="createUserDatabaseInput.emailaddress">
                     </mat-form-field>
                     <br>
                     <mat-form-field appearance="outline">
-                      <mat-label>Height(Ft)</mat-label>
-                      <input matInput>
+                      <mat-label>Phone Number</mat-label>
+                      <input matInput type="tel" [(ngModel)]="createUserDatabaseInput.phonenumber">
+                    </mat-form-field>
+                    <br>
+
+                    <mat-form-field appearance="outline">
+                      <mat-label>Emergency Contact</mat-label>
+                      <input matInput type="tel" [(ngModel)]="createUserDatabaseInput.emergencycontact">
                     </mat-form-field>
                     <br>
                     <mat-form-field appearance="outline">
-                      <mat-label>Weight (Kg)</mat-label>
-                      <input matInput>
+                      <mat-label>Street Address</mat-label>
+                      <textarea matInput type="tel" [(ngModel)]="createUserDatabaseInput.streetaddress" ></textarea>
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field appearance="outline">
+                      <mat-label>City</mat-label>
+                      <input matInput type="tel" [(ngModel)]="createUserDatabaseInput.city">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field appearance="outline">
+                      <mat-label>ZIP Code</mat-label>
+                      <input matInput type="tel" [(ngModel)]="createUserDatabaseInput.zipcode">
                     </mat-form-field>
                     <br>
 
@@ -121,7 +124,7 @@
                 <ng-container *ngIf="type === 'health-record'">
                   <div class="">
                     <h4>Smoke</h4>
-                    <mat-button-toggle-group name="fontStyle" aria-label="Font Style" class="w-100">
+                    <mat-button-toggle-group name="fontStyle" aria-label="Font Style" class="w-100" [(ngModel)]="createUserDatabaseInput.smoke">
                       <mat-button-toggle value="Yes">Yes</mat-button-toggle>
                       <mat-button-toggle value="No">No</mat-button-toggle>
                     </mat-button-toggle-group>
@@ -135,15 +138,12 @@
                     <br><br>
                     <h4>Allergies</h4>
                     <div class="d-flex">
-                      <mat-form-field style="width: 80%">
-                        <input matInput #input>
-                      </mat-form-field>
-                      <button mat-stroked-button (click)="addCookie(input.value)">ADD+</button>
+                      <button class="w-100" mat-stroked-button (click)="allergyDialog(allergiesDialog)">ADD+</button>
                     </div>
-
+                    <br>
                     <h4>Add personal health records</h4>
                     <div class="d-flex">
-                      <button mat-stroked-button (click)="addHealthRecords(healthDialog)">ADD+</button>
+                      <button class="w-100" mat-stroked-button (click)="healthRecordDialog(healthDialog)">ADD+</button>
                     </div>
                     <div class="d-flex list-allergies">
                       <div *ngFor="let item of items" class="allergy-item">
@@ -151,7 +151,7 @@
                       </div>
                     </div>
                     <br>
-                    <button mat-raised-button color="primary" class="w-100" (click)="healthDetails()">
+                    <button mat-raised-button color="primary" class="w-100" (click)="saveUserData()">
                       Next
                     </button>
                   </div>
@@ -168,17 +168,97 @@
   </div>
 </div>
 
-<ng-container #healthDialog>
-  <h1 mat-dialog-title>Hi </h1>
+<ng-template #healthDialog>
   <div mat-dialog-content>
-    <p>What's your favorite animal?</p>
+    <h2>Date</h2>
     <mat-form-field appearance="fill">
-      <mat-label>Favorite Animal</mat-label>
-      <input matInput >
+      <mat-label>Choose a date</mat-label>
+      <input matInput [matDatepicker]="picker" [(ngModel)]="healthRecord.date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <h2>Summary</h2>
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput [(ngModel)]="healthRecord.summnaryname">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Dosage</mat-label>
+      <input matInput [(ngModel)]="healthRecord.summarydosage">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Instruction</mat-label>
+      <input matInput [(ngModel)]="healthRecord.summnaryinstr">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Reason</mat-label>
+      <input matInput [(ngModel)]="healthRecord.summnaryreason">
+    </mat-form-field>
+
+    <h2>RX</h2>
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput [(ngModel)]="healthRecord.rxname">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Dosage</mat-label>
+      <input matInput [(ngModel)]="healthRecord.rxdosage">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Instruction</mat-label>
+      <input matInput [(ngModel)]="healthRecord.rxinstr">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Reason</mat-label>
+      <input matInput [(ngModel)]="healthRecord.rxreason">
+    </mat-form-field>
+
+    <h2>Labs</h2>
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput [(ngModel)]="healthRecord.labsname">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Dosage</mat-label>
+      <input matInput [(ngModel)]="healthRecord.labsdosage">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Instruction</mat-label>
+      <input matInput [(ngModel)]="healthRecord.labsinstr">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Reason</mat-label>
+      <input matInput [(ngModel)]="healthRecord.labsreason">
     </mat-form-field>
   </div>
   <div mat-dialog-actions>
     <button mat-button mat-dialog-close>Cancel</button>
-    <button mat-button cdkFocusInitial>Save</button>
+    <button mat-button cdkFocusInitial (click)="addHealthRecord()">Save</button>
   </div>
-</ng-container>
+</ng-template>
+
+<ng-template #allergiesDialog>
+  <div mat-dialog-content>
+    <mat-form-field appearance="fill">
+      <mat-label>Allergy Name</mat-label>
+      <input matInput [(ngModel)]="allergies.allergyname">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Add a Description</mat-label>
+      <input matInput [(ngModel)]="allergies.description">
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button cdkFocusInitial (click)="addAllergy()">Save</button>
+  </div>
+</ng-template>

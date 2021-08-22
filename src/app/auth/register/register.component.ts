@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Auth } from 'aws-amplify';
+import {Amplify, Auth} from 'aws-amplify';
 import {APIService, CreateUserInput} from "../../API.service";
 import {MatSnackBar} from "@angular/material/snack-bar";
+import {AuthService} from "../../utils/auth.service";
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -17,7 +19,8 @@ export class RegisterComponent implements OnInit {
   confirmPassword: any;
 
   createUser = {} as CreateUserInput;
-  constructor(private api: APIService, private snackBar: MatSnackBar) {
+  userId: any;
+  constructor(private api: APIService, private snackBar: MatSnackBar, private auth: AuthService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -31,6 +34,7 @@ export class RegisterComponent implements OnInit {
           password: this.password,
         });
         this.showVerifyOtp = true
+        console.log('user',user)
       } else{
         // password not matched
         // @ts-ignore
@@ -50,25 +54,27 @@ export class RegisterComponent implements OnInit {
     console.log(otp)
     if (otp.length === 6) {
     }
+    this.otp= otp;
   }
 
   async confirmOtp(): Promise<any>{
     try {
-      const { user } = await Auth.confirmSignUp(this.createUser.email, this.otp);
-      console.log(user);
-      Auth.currentAuthenticatedUser()
-        .then(async user => {
-          console.log(user.username);
-          if(user.username){
-            this.showVerifyOtp = false;
-            await this.create(user.username)
-            this.snackBar.open("Sign up successful", '', {
-              duration: 5000
-            });
-          }
-        })
-        .then(data => console.log(data))
-        .catch(err => console.log(err));
+      await Auth.confirmSignUp(this.createUser.email, this.otp);
+      await this.signIn();
+      // await this.create()
+      // Auth.currentAuthenticatedUser()
+      //   .then(async user => {
+      //     console.log(user.username);
+      //     if(user.username){
+      //       this.showVerifyOtp = false;
+      //       await this.create(user.username)
+      //       this.snackBar.open("Sign up successful", '', {
+      //         duration: 5000
+      //       });
+      //     }
+      //   })
+      //   .then(data => console.log(data))
+      //   .catch(err => console.log(err));
       // .then(user => {
       //   console.log(user)
       // })
@@ -79,9 +85,28 @@ export class RegisterComponent implements OnInit {
     }
   }
 
-  async create(userId: any): Promise<any>{
+  async create(): Promise<any>{
     try {
-      this.api.CreateUserDatabase({UserID: userId})
+      // Auth.currentAuthenticatedUser()
+      //   .then(async user => {
+      //     console.log(user.username);
+      //     if(user.username){
+      //       this.showVerifyOtp = false;
+      //       this.userId = user.username
+      //       await this.api.CreateUserDatabase({UserID: this.userId})
+      //       this.snackBar.open("Sign up successful", '', {
+      //         duration: 5000
+      //       });
+      //     }
+      //   })
+      //   .then(data => console.log(data))
+      //   .catch(err => console.log(err));
+      // .then(user => {
+      //   console.log(user)
+      // })
+      // .then(data => console.log(data))
+      // .catch(err => console.log(err));
+
     } catch (error) {
       console.log('error confirming sign up', error);
     }
@@ -99,6 +124,19 @@ export class RegisterComponent implements OnInit {
       this.snackBar.open("error resending code", '', {
         duration: 5000
       });
+    }
+  }
+
+  async signIn(): Promise<any> {
+    try {
+      const user = await Auth.signIn(this.createUser.email, this.password);
+      this.auth.userId = user.username;
+      this.snackBar.open("Data submitted successfully", '', {
+        duration: 5000
+      });
+      await this.router.navigateByUrl('auth/complete-profile')
+    } catch (error) {
+      console.log('error signing in', error);
     }
   }
 

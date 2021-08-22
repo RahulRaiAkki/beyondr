@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
     try {
       const { user } = await Auth.signUp({
         username: 'rk507922@gmail.com',
-        password: '12345678978',
+        password: '12345678',
       });
       console.log(user);
     } catch (error) {
@@ -37,15 +37,16 @@ export class AppComponent implements OnInit {
 
   async confirmSignUp(): Promise<any>{
     try {
+      console.log(this.otp);
       const { user } = await Auth.confirmSignUp('rk507922@gmail.com', this.otp);
       console.log(user);
       Auth.currentAuthenticatedUser()
         .then(async user => {
-          console.log(user.username);
+          console.log('authenicated',user.username);
           await this.create(user.username)
         })
-        .then(data => console.log(data))
-        .catch(err => console.log(err));
+        .then(data => console.log('currentAuthenticatedUser d',data))
+        .catch(err => console.log('currentAuthenticatedUser e',err));
         // .then(user => {
         //   console.log(user)
         // })
@@ -58,7 +59,7 @@ export class AppComponent implements OnInit {
 
   async create(userId: any): Promise<any>{
     try {
-      this.api.CreateUserDatabase({UserID: userId})
+      await this.api.CreateUserDatabase({UserID: userId})
     } catch (error) {
       console.log('error confirming sign up', error);
     }
@@ -74,7 +75,7 @@ export class AppComponent implements OnInit {
 
   async signIn(): Promise<any> {
     try {
-      const user = await Auth.signIn('rk507922@gmail.com', '12345678978');
+      const user = await Auth.signIn('rk507922@gmail.com', '12345678');
       console.log(user);
     } catch (error) {
       console.log('error signing in', error);

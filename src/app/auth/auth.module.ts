@@ -23,10 +23,12 @@ import {MatOptionModule} from "@angular/material/core";
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import {MatListModule} from "@angular/material/list";
 import {MatDialogModule} from "@angular/material/dialog";
+import { DoctorCoachProfileComponent } from './doctor-coach-profile/doctor-coach-profile.component';
+import {MatCarouselModule} from "@ngmodule/material-carousel";
 
 
 @NgModule({
-  declarations: [LoginComponent, RegisterComponent, PreLoginComponent, CompleteProfileComponent],
+  declarations: [LoginComponent, RegisterComponent, PreLoginComponent, CompleteProfileComponent, DoctorCoachProfileComponent],
     imports: [
         CommonModule,
         AuthRoutingModule,
@@ -47,6 +49,7 @@ import {MatDialogModule} from "@angular/material/dialog";
         MatButtonToggleModule,
         MatListModule,
         MatDialogModule,
+        MatCarouselModule,
     ]
 })
 export class AuthModule { }
