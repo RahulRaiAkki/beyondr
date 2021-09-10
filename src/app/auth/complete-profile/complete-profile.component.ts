@@ -1,12 +1,17 @@
 import {Component, OnInit, TemplateRef} from '@angular/core';
-import {APIService, CreateUserDatabaseInput, CreateAllergiesInput, CreateReportInput} from "../../API.service";
+import {
+  APIService,
+  CreateUserDatabaseInput,
+  CreateAllergiesInput,
+  CreateReportInput,
+  ReportType
+} from "../../API.service";
 import {MatDialog} from "@angular/material/dialog";
 import {AuthService} from "../../utils/auth.service";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {Router} from "@angular/router";
 import {Auth} from "aws-amplify";
 import { Storage } from 'aws-amplify';
-import {DomSanitizer} from "@angular/platform-browser";
 
 
 @Component({
@@ -25,7 +30,7 @@ export class CompleteProfileComponent implements OnInit {
   allergies = {} as CreateAllergiesInput;
 
   constructor(public dialog: MatDialog, private api: APIService, private auth: AuthService, private snackBar: MatSnackBar,
-              private router: Router, private sanitizer: DomSanitizer) {
+              private router: Router) {
   }
 
   async ngOnInit() {
@@ -81,11 +86,13 @@ export class CompleteProfileComponent implements OnInit {
 
   async addHealthRecord() {
     try {
-      this.createUserDatabaseInput.UserID = this.auth.userId
+      this.healthRecord.userID = this.auth.userId;
+      this.healthRecord.reoporttype = ReportType.DIGITAL;
       const res = await this.api.CreateReport(this.healthRecord);
+      this.dialog.closeAll()
       console.log(res);
       this.snackBar.open("Data submitted successfully", '', {
-        duration: 5000
+        duration: 3000
       });
     } catch (error) {
       console.log('error in save userData', error);
@@ -94,11 +101,12 @@ export class CompleteProfileComponent implements OnInit {
 
   async addAllergy() {
     try {
-      this.createUserDatabaseInput.UserID = this.auth.userId
+      this.allergies.userid = this.auth.userId
       const res = await this.api.CreateAllergies(this.allergies);
+      this.dialog.closeAll()
       console.log(res);
       this.snackBar.open("Data submitted successfully", '', {
-        duration: 5000
+        duration: 3000
       });
     } catch (error) {
       console.log('error in save userData', error);
@@ -116,7 +124,7 @@ export class CompleteProfileComponent implements OnInit {
     try {
       await Storage.put(this.auth.userId, file, {});
       this.snackBar.open("Image saved successfully", '', {
-        duration: 5000
+        duration: 3000
       });
     } catch (error) {
       console.log('Error uploading file: ', error);
@@ -129,7 +137,7 @@ export class CompleteProfileComponent implements OnInit {
       const res = await this.api.CreateUserDatabase(this.createUserDatabaseInput);
       console.log(res);
       this.snackBar.open("Data submitted successfully", '', {
-        duration: 5000
+        duration: 3000
       });
       await this.router.navigateByUrl('auth/doc-coach-profile')
     } catch (error) {

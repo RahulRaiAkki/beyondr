@@ -39,13 +39,13 @@ export class RegisterComponent implements OnInit {
         // password not matched
         // @ts-ignore
         this.snackBar.open("Password didn't matched", '', {
-          duration: 5000
+          duration: 3000
         });
       }
     } catch (error) {
       console.log('error signing up:', error);
       this.snackBar.open(error.message, '', {
-        duration: 5000
+        duration: 3000
       });
     }
   }
@@ -69,7 +69,7 @@ export class RegisterComponent implements OnInit {
       //       this.showVerifyOtp = false;
       //       await this.create(user.username)
       //       this.snackBar.open("Sign up successful", '', {
-      //         duration: 5000
+      //         duration: 3000
       //       });
       //     }
       //   })
@@ -95,7 +95,7 @@ export class RegisterComponent implements OnInit {
       //       this.userId = user.username
       //       await this.api.CreateUserDatabase({UserID: this.userId})
       //       this.snackBar.open("Sign up successful", '', {
-      //         duration: 5000
+      //         duration: 3000
       //       });
       //     }
       //   })
@@ -117,12 +117,12 @@ export class RegisterComponent implements OnInit {
       await Auth.resendSignUp(this.createUser.email);
       console.log('code resent successfully');
       this.snackBar.open("code resent successfully", '', {
-        duration: 5000
+        duration: 3000
       });
     } catch (err) {
       console.log('error resending code: ', err);
       this.snackBar.open("error resending code", '', {
-        duration: 5000
+        duration: 3000
       });
     }
   }
@@ -132,7 +132,7 @@ export class RegisterComponent implements OnInit {
       const user = await Auth.signIn(this.createUser.email, this.password);
       this.auth.userId = user.username;
       this.snackBar.open("Data submitted successfully", '', {
-        duration: 5000
+        duration: 3000
       });
       await this.router.navigateByUrl('auth/complete-profile')
     } catch (error) {
