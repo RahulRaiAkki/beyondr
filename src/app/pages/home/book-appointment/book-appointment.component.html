@@ -1,0 +1,47 @@
+<div style="width: 100%">
+
+
+  <h2>Find Professionals</h2>
+  <p>Doctors Coach to help</p>
+
+  <input matInput placeholder="Search doctor" type="text">
+
+
+  <mat-tab-group>
+    <mat-tab label="Doctors">
+      Data Doctor
+    </mat-tab>
+    <mat-tab label="Coaches">
+      Data Coaches
+    </mat-tab>
+  </mat-tab-group>
+
+
+  <mat-carousel
+    [autoplay]="false"
+    [hideArrows]="false"
+    [hideIndicators]="true"
+    [interval]="2000"
+    [slides]=count
+    [useKeyboard]="true"
+    [useMouseWheel]="false"
+    color="accent"
+    maxWidth="auto"
+    orientation="ltr"
+    timings="250ms ease-in"
+  >
+    <mat-carousel-slide
+      #matCarouselSlide
+      *ngFor="let slide of slides; let i = index"
+      [hideOverlay]="true"
+      overlayColor="#00000040"
+    >
+      <div class="d-flex w-100 h-100">
+        <div (click)="dateClicked(1)" class="date">First</div>
+        <div (click)="dateClicked(2)" class="date">Second</div>
+      </div>
+
+    </mat-carousel-slide>
+
+  </mat-carousel>
+</div>

@@ -1,0 +1,15 @@
+.date{
+  height: 50%;
+  background: #fff;
+  border: 1px solid #F6F7F9;
+  flex-grow: 1;
+}
+
+:host ::ng-deep .mat-tab-header{
+  border: 0;
+}
+
+::ng-deep .mat-grid-tile-content{
+  display: block;
+}
+

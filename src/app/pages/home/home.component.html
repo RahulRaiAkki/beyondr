@@ -1,1 +1,14 @@
-<h1 class="text-center mt-4">Coming Soon</h1>
+<mat-grid-list cols="4" rowHeight="100vh" gutterSize="10px">
+  <mat-grid-tile
+    [colspan]="3"
+    [rowspan]="1"
+    [style.background]="'lightblue'">
+    <app-book-appointment></app-book-appointment>
+  </mat-grid-tile>
+  <mat-grid-tile
+    [colspan]="1"
+    [rowspan]="1"
+    [style.background]="'lightblue'">
+    Two
+  </mat-grid-tile>
+</mat-grid-list>
